@@ -1,0 +1,54 @@
+###
+# Site settings
+###
+
+## E-mail address (used for contact link)
+email: reuben@letterracer.com
+
+## Social media links
+
+# omit the @
+twitter_handle: RATKING
+# facebook.com/ALL-OF-THIS-XXXXXXX/
+facebook_page_id: Letter-Racer-270734446104
+instagram_username: letterracerny
+# youtube.com/channel/XXXXXXXXXXXXX
+youtube_channel_id: UC2WmOxxA6joRd4gldNFHJ5Q
+
+
+
+
+
+###
+# Please do not edit below this line.
+###
+
+markdown: kramdown
+future: true
+
+title: Letter Racer
+description: NYC Music Collective
+baseurl: ""
+url: http://letterracer.com
+shop_url: http://shop.letterracer.com
+blog_url: http://blog.letterracer.com
+
+permalink: /shows/:title--:month-:day-:year
+
+
+defaults:
+-
+    scope:
+        path: ""
+        type: pages
+    values:
+        layout: default
+        twitter_card: summary
+-
+    scope:
+        path: ""
+        type: posts
+    values:
+        layout: post
+        section: shows
+        twitter_card: summary

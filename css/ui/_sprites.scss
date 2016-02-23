@@ -1,0 +1,62 @@
+/*------------------------------------*\
+    $SPRITES.CSS
+\*------------------------------------*/
+@font-face {
+  font-family: 'FontAwesome';
+  src:url('http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'),url('http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'),url('http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'),url('http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'),url('http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon{ font-family:FontAwesome, 'FontAwesome'; }
+
+.icon--monaco{
+  font-family: 'LetterRacer10', Monaco, monospace;
+  font-size:12px;
+  line-height:6px;
+}
+
+.icon--tiny{
+  font-size:10px;
+  position:relative;
+  top:-2px;
+}
+
+.sprite--rtt, .sprite--mail-list{
+  top:-3px;
+}
+
+.sprite--rtt{
+  width:21px;
+  height:22px;
+}
+
+.sprite--mail-list{
+  width:51px;
+  height:40px;
+}
+
+.sprite--loading{
+  width:$base-spacing-unit*1.5;
+  height:$half-spacing-unit;
+  background-size:$base-spacing-unit*1.5 $half-spacing-unit;
+  background-image:url($loading-img-url);
+}
+
+
+.sprite--logo{
+	background-image:url($logo-img-url);
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+
+
+.sprite--logo-header{
+	width:148px;
+	height:148px;
+}
+
+.sprite--logo-footer{
+	width:$base-spacing-unit*3;
+	height:$base-spacing-unit*3;
+}

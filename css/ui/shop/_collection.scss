@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    $COLLECTION.CSS
+\*------------------------------------*/
+
+// .collection-header{
+// 	border-bottom:solid $text-color--darken 1px;
+// 	margin-bottom:$base-spacing-unit;
+// }
+
+// .collection-banner, .collection-banner__img{
+// 	height:$base-spacing-unit*6;
+// 	@include media-query(lap-and-up){
+// 		height:$base-spacing-unit*16;
+// 	}
+// }
+
+// .collection-banner{
+// 	position:relative;
+// 	// margin-bottom:$half-spacing-unit;
+
+// }
+
+// 	.collection-banner__img{
+// 		position:absolute;
+// 		top:0px;
+// 		left:0px;
+// 		background-size:100% auto;
+// 		background-position:center center;
+// 		background-repeat:no-repeat;
+// 		width:100%;
+// 	}
+
+// 	.collection-banner__title{
+// 		position:absolute;
+// 		margin-bottom:0px;
+// 		bottom:$half-spacing-unit;
+// 		right:$half-spacing-unit;
+// 		padding:$half-spacing-unit/2 $half-spacing-unit;
+// 		background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP4/xQAAuYB5e33aXgAAAAASUVORK5CYII=);
+// 		text-transform:uppercase;
+// 		font-weight:200px;
+// 		z-index:600;
+// 	}
+
+// // .collection-header{
+// // 	margin-bottom:$base-spacing-unit;
+// // }
+
+// // 	.collection-img{
+// // 		text-align:center;
+
+// // 		@include media-query(lap-and-up){ text-align:right; }
+// // 	}
+
+// // 		.collection-img__img{
+// // 			max-width:$base-spacing-unit*4;
+// // 			@include vendor(border-radius, 100%);
+// // 		}
+
+// // 	.current-collection{
+// // 		line-height:$base-spacing-unit*4;
+// // 	}
+
+// // 		.current-collection__title, .current-collection__filter{ vertical-align:bottom; }
+
+// // 		.current-collection__title{
+// // 			font-size:$base-spacing-unit*2;
+// // 			line-height:$base-spacing-unit*3;
+// // 			font-family:'Droid Serif', serif;
+// // 			color:$background-color--lighten;
+// // 			margin-bottom:0px;
+// // 		}
+
+// // .collection-description{
+	
+// // }
+
+// // 	.collection-img, .collection-description__text{ display:inline-block; vertical-align:middle; }
+
+// // 	.collection-img{
+// // 		@extend %scalable;
+// // 		max-width:$base-spacing-unit*4;
+// // 		@include vendor(border-radius, 100%);
+// // 	}
+
+	
+
+// // 	.collection-description__text{
+// // 		margin-left:$base-spacing-unit*2;
+// // 		margin-bottom:0px;
+
+// // 		.text__title{
+// // 			@include font-size($base-spacing-unit*1.5);
+// // 			font-family:'Droid Serif', serif;
+// // 			color:$background-color--lighten;
+// // 		}
+
+// // 		.text__desc{
+// // 			vertical-align:baseline;
+
+// // 			a{
+// // 				@include font-size($half-spacing-unit);
+// // 				color:$background-color--lighten2;
+// // 				margin-right:$half-spacing-unit;
+// // 				text-decoration:none;
+// // 				&:hover,&:active{ color:$text-color;text-decoration:underline; }
+// // 			}
+// // 		}
+// // 	}

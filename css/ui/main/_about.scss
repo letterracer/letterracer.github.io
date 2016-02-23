@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    $ABOUT.CSS
+\*------------------------------------*/
+
+.about__video{
+    height:158px;
+    width:281px;
+
+    @include media-query(lap){
+        height:281px;
+        width:500px;
+    }
+
+    @include media-query(desk){
+        height:562px;
+        width:1000px;
+    }
+}
+
+.btn--instagram,.btn--facebook{
+    color:$background-color;
+    & .link-complex__target{ display:none; }
+}
+.btn--instagram{ background:$color-instagram }
+.btn--facebook{ background:$color-facebook }

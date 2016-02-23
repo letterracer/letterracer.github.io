@@ -1,0 +1,28 @@
+{% capture twitter_img %}{% if page.poster_url %}{{ page.poster_url }}{% else %}/img/logo.png{% endif %}{% endcapture %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="top" data-last-publish="{{ 'today' | date: "%m-%d-%Y" }}">
+{% include menu-bar.html %}
+
+<div class="page  remodal-bg">
+    {% include header.html %}
+    <div class="page__content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
+    </div>
+    <div class="push-footer"></div>
+</div>
+
+{% include footer.html %}
+{% include mail-list-modal.html %}
+
+<script src="/js/vendors.js"></script>
+<script src="/js/preload.min.js"></script>
+<script src="/js/main.js"></script>
+{% if page.scripts %}{% include {{ page.scripts }} %}{% endif %}
+</body>
+</html>

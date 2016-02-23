@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    $IMAGE-SWAP.CSS
+\*------------------------------------*/
+.image-swap{
+    margin-bottom:$base-spacing-unit;
+}
+
+.image-swap__thumbs{
+}
+
+.image-swap__thumb{
+    max-width:$base-spacing-unit*4;
+    max-height:$base-spacing-unit*4;
+    @extend %scalable;
+    
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:left center;
+}
+
+.zoom-viewport{
+    z-index:10;
+    cursor:zoom-in;
+    position:relative;
+
+    .indicator-container{
+        position:relative;
+    }
+
+    .indicator{
+        padding:$half-spacing-unit/4 $half-spacing-unit*1.5;
+        font-size:14px;
+        line-height:$half-spacing-unit;
+        text-transform:uppercase;
+        position:absolute;
+        z-index:9999;
+        right:0px;
+        background-color:white;
+        background:lighten($color-highlight, 12%);
+    }
+}

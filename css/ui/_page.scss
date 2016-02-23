@@ -1,0 +1,209 @@
+/*------------------------------------*\
+    $PAGE.CSS
+\*------------------------------------*/
+
+html,body{
+	background-color: $background-color;
+	color: $text-color;
+	height:100%;
+}
+
+body{
+	font-weight:300;
+}
+
+:focus{ outline:none }
+
+.wrapper{
+	max-width:768px;
+	margin:0px auto;
+	padding-left:$half-spacing-unit;
+	padding-right:$half-spacing-unit;
+
+	@include media-query(desk){
+		max-width:1100px;
+		padding-left:$base-spacing-unit;
+		padding-right:$base-spacing-unit;
+	}
+}
+
+.wrapper--narrow{
+	max-width:$base-spacing-unit*38;
+}
+
+.menu-bar{
+	position:fixed;
+	top:0px;
+	display:block;
+	height:$base-spacing-unit*2; /* [1] */
+	width:100%;
+	z-index:1000;
+	background-color:inherit;
+	border-bottom: solid 1px $text-color--lighten;
+	opacity:.99;
+	top:-$base-spacing-unit*2;
+
+	@include vendor(transition, opacity 1s, border-color 1s, top .4s);
+
+	.wrapper{
+		opacity:.51;
+		@include vendor(transition, opacity 1s);
+	}
+
+		&.hover{ border-color:lighten($text-color--lighten, 40%) }
+		&.hover, &.hover .wrapper{ opacity:1 }
+
+	// &:after{
+	// 	display:block;
+	// 	content:"\n";
+	// 	color:transparent;
+	// 	position:fixed;
+	// 	top:$base-spacing-unit*2;
+	// 	width:100%;
+	// 	@include vendor(box-shadow, inset 0 4px 12px -9px rgba(0,0,0,.1));
+	// }
+}
+
+.menu-bar--enabled{ top:0px; }
+	.menu-bar__button,.masthead{color:$text-color;}
+
+	.menu-bar__button{
+		&, & img{ line-height:$base-spacing-unit*2 }
+		text-transform:uppercase;
+	}
+
+	.masthead{
+		margin:0px auto;
+		text-decoration:none;
+		line-height:42px;
+	}
+
+	.masthead__heading{
+		margin-bottom:0px;
+		font-size:36px;
+		text-transform:uppercase;
+	}
+
+
+.page{
+	@extend %force-max-height;
+	clear:both;
+	position:relative;
+	padding-bottom:$base-spacing-unit;
+
+	margin-bottom:-$base-spacing-unit*7;
+	@include media-query(lap-and-up){ margin-bottom:-$base-spacing-unit*3.5 }
+}
+	.page__header{
+		text-align:center;
+		padding-top:$base-spacing-unit;
+	}
+
+	.page__content{
+		padding-top:$base-spacing-unit;
+		padding-bottom:$base-spacing-unit;
+	}
+
+
+
+
+.footer-container, .push-footer{
+	height:$base-spacing-unit*7;
+	display:block;
+	position:relative;
+
+	@include media-query(lap-and-up){ height:$base-spacing-unit*3.5 }
+}
+
+// .page--no-footer{ margin-bottom:0px }
+// .page--no-menu{ padding-top:0px }
+
+.footer-container{
+	background-color:inherit;
+	clear:both;
+}
+	
+	.footer{
+		padding-top:$base-spacing-unit*.75;
+		padding-bottom:$base-spacing-unit*.75;
+
+		@include media-query(lap-and-up){
+			padding-top:0px;
+			padding-bottom:$half-spacing-unit;
+		}
+	}
+
+	.footer__branding, .footer__nav, .footer__social, .footer__copyright, .footer__return-to-top{
+		@extend .palm-one-whole;
+		text-align:center!important;
+	}
+
+	.footer__nav, .footer__social, .footer__copyright, .footer__return-to-top{
+		line-height:$base-spacing-unit*1.5;
+		max-height:$base-spacing-unit*1.5;
+	}
+
+	.footer__branding{
+		@extend .one-eighth;
+		@extend .lap-one-sixth;
+		line-height:$base-spacing-unit*3;
+		max-height:$base-spacing-unit*3;
+
+		@include media-query(lap-and-up){
+			text-align:left!important;
+		}
+	}
+
+	.footer__nav{
+		@extend .three-quarters;
+		line-height:$base-spacing-unit*2;
+		margin-top:$half-spacing-unit;
+		margin-bottom:$half-spacing-unit;
+
+		@include media-query(lap-and-up){
+			text-align:left!important;
+			margin-bottom:0px;
+			margin-top:0px;
+		}
+	}
+
+	.footer__social{
+		@extend .one-quarter;
+		line-height:$base-spacing-unit*2;
+		@include media-query(lap-and-up){
+			text-align:right!important;
+		}
+	}
+
+	.footer__copyright{
+		@extend .three-quarters;
+		line-height:$base-spacing-unit;
+		@include media-query(lap-and-up){
+			text-align:left!important;
+		}
+	}
+
+		.copyright{
+			opacity:.9;
+			font-weight:300;
+			text-transform:uppercase;
+			font-size:18px;
+			vertical-align:top;
+		}
+
+	.footer__return-to-top{
+		@extend .one-quarter;
+		margin-top:$half-spacing-unit;
+		margin-bottom:$base-spacing-unit*.75;
+		@include media-query(lap-and-up){
+			position:relative;
+			left:-9999px;
+			margin-top:0px;
+			margin-bottom:0px;
+		}
+	}
+
+		.return-top{
+			opacity:0.7;
+			&:hover{ opacity:1; }
+		}

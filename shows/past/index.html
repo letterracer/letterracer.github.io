@@ -1,0 +1,21 @@
+---
+layout: default
+title: Past Shows
+section: shows
+scripts: update-shows-js.html
+---
+
+{% capture nowtime %}{{ 'today' | date: "%Y-%m-%d" | date: '%s' }}{% endcapture %}
+
+{% assign posts = site.posts | sort: 'date' | reverse %}
+<div class="grid  show-list  js-shows">{% for post in posts %}{% capture posttime %}{{ post.date | date: "%Y-%m-%d" | date: '%s' }}{% endcapture %}{% unless forloop.first %}-->{% endunless %}{% if posttime < nowtime %}{% include gridshow.html %}{% endif %}{% unless forloop.last %}<!--{% endunless %}
+{% endfor %}
+</div>
+
+<div class="text-center">
+    <a class="link-complex" href="/shows/">
+        <i class="icon  icon--tiny" data-icon="&#xF061"></i> <span class="link-complex__target">UPCOMING SHOWS</span>
+    </a>
+</div>
+
+{% include gridshow.html prototype="true" %}

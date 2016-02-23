@@ -1,0 +1,56 @@
+      <ul class="city-nav">
+        <li class="city-nav__item  city-nav__shows{% if page.section == 'shows' %}  current{% endif %}">
+          <img usemap="#city-one" class="city-nav__img" src="/img/nav/shows{% if page.section == 'shows' %}-anim{% endif %}.gif" data-preload="http://letterracer.com/img/nav/shows-anim.gif">
+          <a class="city-nav__link  js-citymap" data-link="shows" href="/shows/">Shows</a></li>
+        </li><!--
+     --><li class="city-nav__item  city-nav__shop">
+          <img usemap="#city-two" class="city-nav__img" src="/img/nav/shop.gif" data-preload="http://letterracer.com/img/nav/shop-anim.gif">
+          <a class="city-nav__link  js-citymap" data-link="shop" href="http://shop.letterracer.com">Shop</a></li>
+        </li><!--
+     --><li class="city-nav__item  city-nav__mail-list">
+          <img usemap="#city-three" class="city-nav__img" src="/img/nav/mail-list.gif" data-preload="http://letterracer.com/img/nav/mail-list-anim.gif">
+          <a class="city-nav__link  js-citymap" data-link="mail-list" href="#mail-list">Mail List</a></li>
+        </li><!--
+     --><li class="city-nav__item  city-nav__about{% if page.section == 'about' %}  current{% endif %}">
+          <img usemap="#city-four" class="city-nav__img" src="/img/nav/about{% if page.section == 'about' %}-anim{% endif %}.gif" data-preload="http://letterracer.com/img/nav/about-anim.gif">
+          <a class="city-nav__link  js-citymap" data-link="about" href="/about/">About</a></li>
+        </li><!--
+     --><li class="city-nav__item  city-nav__blog">
+          <img usemap="#city-five" class="city-nav__img" src="/img/nav/blog.gif" data-preload="http://letterracer.com/img/nav/blog-anim.gif">
+          <a class="city-nav__link  js-citymap" data-link="blog" href="http://blog.letterracer.com">Blog</a></li>
+        </li><!--
+     --><li class="city-nav__item  city-nav__contact{% if page.section == 'contact' %} current{% endif %}">
+          <img usemap="#city-six" class="city-nav__img" src="/img/nav/contact{% if page.section == 'contact' %}-anim{% endif %}.gif" data-preload="http://letterracer.com/img/nav/contact-anim.gif">
+          <a class="city-nav__link  js-citymap" data-link="contact" href="mailto:reuben@letterracer.com">Contact</a></li>
+        </li>
+      </ul>
+
+      <map name="city-one">
+        <area shape="poly" class="js-citymap{% if page.section == 'shows' %}  current{% endif %}" data-link="shows" href="/shows/" coords="181,412,42,412,42,328,20,328,12,312,12,232,42,232,40,186,70,114,181,114">
+      </map>
+
+      <map name="city-two">
+        <area shape="poly" class="js-citymap" data-link="shows" href="/shows/" coords="0,114,10,114,10,412,0,412">
+        <area shape="poly" class="js-citymap" data-link="shop" href="http://shop.letterracer.com" coords="172,412,172,17,32,17,1,91,7,103,11,103,11,412">
+      </map>
+
+      <map name="city-three">
+        <area shape="poly" class="js-citymap" data-link="shop" href="http://shop.letterracer.com" coords="0,17,48,17,42,36,42,95,11,162,11,412,0,412">
+        <area shape="poly" class="js-citymap" data-link="mail-list" href="#mail-list" coords="150,412,150,88,116,88,116,66,94,29,80,29,60,63,60,88,46,88,12,162,12,412">
+      </map>
+
+      <map name="city-four">
+        <area shape="poly" class="js-citymap" data-link="mail-list" href="#mail-list" coords="0,88,35,88,35,190,5,258,5,412,0,412">
+        <area shape="poly" class="js-citymap{% if page.section == 'about' %}  current{% endif %}" data-link="about" href="/about/" coords="136,412,136,219,133,213,140,202,140,186,39,186,6,262,6,412">
+        <area shape="poly" class="js-citymap" data-link="blog" href="http://blog.letterracer.com" coords="140,206,139,206,135,214,137,219,137,412,140,412">
+      </map>
+
+      <map name="city-five">
+        <area shape="poly" class="js-citymap" data-link="about" href="/about/" coords="0,186,5,186,0,199">
+        <area shape="poly" class="js-citymap" data-link="blog" href="http://blog.letterracer.com" coords="114,412,148,403,148,144,119,143,113,129,95,129,88,144,24,144,0,200,0,412">
+      </map>
+
+      <map name="city-six">
+        <area shape="poly" class="js-citymap" data-link="blog" href="http://blog.letterracer.com" coords="0,144,21,144,21,325,11,325,2,345,2,386,9,383,0,397">
+        <area shape="poly" class="js-citymap" data-link="contact" href="mailto:reuben@letterracer.com" coords="7,412,49,412,59,396,33,396,33,382,49,382,53,375,51,326,21,326,9,345,9,382,27,382,27,396,13,396,6,412">
+      </map>

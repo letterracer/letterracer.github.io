@@ -1,0 +1,44 @@
+body{font-weight:300; text-align: center; font-family: sans-serif;}
+
+.splash-page{margin:0px auto}
+    
+.splash-img {
+    height: 100%;
+}
+
+@media all and (orientation:portrait) {
+    .splash-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+map area {
+outline:none;
+}
+
+.brand-link{
+    text-transform:uppercase;
+    font-weight:300}
+    
+.page-foot{
+    text-align:center;
+    margin-top:25px;
+    width:100%;
+    font-weight:300;
+    text-transform:uppercase;
+    font-size:12px;
+    vertical-align:top}
+     
+// .page-foot .branding,.page-foot .copyright{opacity:.6}
+     
+// .page-foot .branding{
+//     -webkit-transition:opacity 0.4s;
+//     -moz-transition:opacity 0.4s;
+//     -ms-transition:opacity 0.4s;
+//     -o-transition:opacity 0.4s;
+//     transition:opacity 0.4s}
+     
+// .page-foot .branding:hover{opacity:1}
+     
+// .page-foot .copyright{font-size:10px;margin: 7px;}

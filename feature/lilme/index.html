@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
+    <!--twitter metadata start-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@wikset">
+    <meta name="twitter:domain" content="letterracer.com">
+    <meta name="twitter:creator" content="@wikset">
+    <meta name="twitter:title" content="Lil Me by Wiki out now!">
+    <meta name="twitter:image:src" content="http://letterracer.com/img/splash-lilme/wiki_lilme_500px.jpg">
+    <meta name="twitter:description" content="Free download available on letterracer.com">
+    <!--twitter metadata end-->
+    <!--facebook metadata start-->
+    <meta property="og:image" content="http://letterracer.com/img/splash-lilme/lilmesplashpage.png" />
+    <meta name="description" content="LIL ME coming soon">
+    <!--facebook metadata end-->
+
+    <link rel="shortcut icon" href="/img/logo.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/logo.png">
+    <meta name="apple-mobile-web-app-title" content="Letter Racer">
+
+    <title>LIL ME</title>
+    <link rel="stylesheet" href="/css/letterracer.css">
+    <script src="/js/mobile.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/responsive-imagemaps.min.js"></script>
+    <script language="javascript">
+        $(document).ready(function(){$("/img[usemap]").rwdImageMaps()});
+        function loadScriptQueue(){
+            var scriptQueue = ["/js/lilme.min.js"];
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            for (i=0; i<scriptQueue.length; i++) {
+                tag = document.createElement('script');
+                tag.src = scriptQueue[i];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);}}
+        $(document).ready(function(){
+            md = new MobileDetect(window.navigator.userAgent);
+            if (md.mobile() === null) {loadScriptQueue();}});
+    </script>
+</head>
+
+<body>
+<div class="splash-page"><img usemap="#splash" class="splash-img" src="/img/splash-lilme/lilme_mobile.png" name="splash"></div>
+<map name="splash">
+    <area shape="poly" coords="523,86,564,73,548,43,554,38,573,70,585,62,616,60,622,42,619,33,619,22,626,24,630,33,636,64,641,74,664,72,647,121,617,117,594,117,570,115,547,114,525,93" onMouseOver="outnowGo()" onMouseOut="outnowStop()">
+    <area shape="poly" target="_blank" href="http://download.letterracer.com/wiki_lilme.zip" coords="348,159,823,159,823,635,348,635" onMouseOver="downloadGo()" onMouseOut="downloadStop()" onClick="ga('send', 'event', 'downloads', 'lilme');">
+    <area shape="poly" target="_blank" href="https://www.youtube.com/watch?v=nRIbNNDXV0E" coords="66,188,244,183,269,218,276,250,295,272,291,300,221,319,217,349,141,367,121,340,48,320,38,311,51,288,82,263" onMouseOver="lwmmGo()" onMouseOut="lwmmStop()">
+    <area shape="poly" target="_blank" href="https://soundcloud.com/wikset/hate-is-earned-prod-black-milk" coords="877,213,919,213,980,223,1091,240,1089,279,1122,299,1115,329,1110,340,1102,347,1046,347,1051,366,1019,378,977,380,952,372,945,335,941,256,872,248" onMouseOver="hateGo()" onMouseOut="hateStop()">
+    <area shape="poly" target="_blank" href="https://twitter.com/wikset" coords="149,736,197,703,222,711,249,735,257,759,235,781,204,797,198,814,171,810,137,774" onMouseOver="twitterGo()" onMouseOut="twitterStop()">
+    <area shape="poly" target="_blank" href="https://soundcloud.com/wikset" coords="413,708,437,704,459,709,476,726,482,746,482,765,474,788,453,801,428,802,414,794,397,776,391,752,396,725" onMouseOver="soundcloudGo()" onMouseOut="soundcloudStop()">
+    <area shape="poly" target="_blank" href="http://shop.letterracer.com" coords="677,706,693,713,728,718,760,743,778,792,747,800,711,780,711,790,702,792" onMouseOver="merchGo()" onMouseOut="merchStop()">
+    <area shape="poly" target="_blank" href="http://blog.letterracer.com" coords="922,745,985,731,1009,741,1004,758,955,787,925,773" onMouseOver="blogGo()" onMouseOut="blogStop()">
+</map>
+    
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/172904351%3Fsecret_token%3Ds-hF2Ld&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<div class="page-foot">
+    <img class="branding" src="/img/splash-lilme/logo.png" width="100" height="100">
+    <div class="copyright">Copyright &copy; 2015 Letter Racer</div>
+</div>
+</body>
+</html>

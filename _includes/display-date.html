@@ -1,0 +1,1 @@
+{% capture month %}{{ include.date | date: "%m" }}{% endcapture %}{{ include.date | date: "%b" }}{% if month != "05" %}.{% endif %} {{ include.date | date: "%d '%y" }}

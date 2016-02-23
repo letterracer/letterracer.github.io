@@ -1,0 +1,27 @@
+---
+layout: default
+title: Shows
+section: shows
+scripts: update-shows-js.html
+---
+
+{% assign nowtime = 'today' | date: "%Y-%m-%d" | date: '%s' %}{% assign upcoming_shows = false %}{% assign past_shows = false %}{% for post in site.posts %}{% assign posttime = post.date | date: "%Y-%m-%d" | date: '%s' %}% if posttime > nowtime %}{% assign upcoming_shows = true %}{% else %}{% assign past_shows = true %}{% endif %}{% endfor %}
+{% assign posts = site.posts | sort: 'date' %}
+
+{% if upcoming_shows == false %}
+<h1 class="color-negative  text-center">No upcoming shows.</h1>
+{% else %}
+<div class="grid  show-list  js-shows">{% for post in posts %}{% capture posttime %}{{ post.date | date: "%Y-%m-%d" | date: '%s' }}{% endcapture %}{% unless forloop.first %}-->{% endunless %}{% if posttime > nowtime %}{% include gridshow.html %}{% else %}{% assign past_shows = true %}{% endif %}{% unless forloop.last %}<!--{% endunless %}
+{% endfor %}
+</div>
+{% endif %}
+
+{% if past_shows %}
+<div class="text-center">
+    <a class="link-complex" href="/shows/past/">
+        <i class="icon  icon--tiny" data-icon="&#xF060"></i> <span class="link-complex__target">PAST SHOWS</span>
+    </a>
+</div>
+{% endif %}
+
+

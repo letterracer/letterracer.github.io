@@ -1,0 +1,14 @@
+<footer class="page-foot">
+  <img class="page-foot__branding" src="/img/logo.png" width="84" height="84">
+ 
+  {% if include.ticker == true %} 
+  <hgroup class="page-foot__ticker">
+    <h3 class="hN" id="ticker"></h3>
+    <h5 class="hN">New York, NY</h5>
+  </hgroup>
+  {% endif %}
+  
+  <div class="page-foot__copyright  copyright">
+    Copyright &copy; {{ site.time | date: '%Y' }} Letter Racer.
+  </div>
+</footer>

@@ -1,0 +1,112 @@
+/*------------------------------------*\
+    $FORMS.CSS
+\*------------------------------------*/
+
+.select{
+	position:relative;
+	display:inline-block;
+	select{
+		border:solid 1px $text-color;
+		padding:$half-spacing-unit/4 $half-spacing-unit $half-spacing-unit/4 $half-spacing-unit/2;
+		@include vendor(appearance, none);
+		@include vendor(border-radius, $brand-round);
+		&, option{ 	font-family:'Letter Racer 10' }
+	}
+}
+
+.number-field,.number-field-label{ display:inline-block; }
+
+.number-field-label{ font-size:18px; }
+
+.number-field{
+	width:$base-spacing-unit+$half-spacing-unit;
+	border-width:0px;
+	border-bottom:solid $text-color 1px;
+	text-align:center;
+	padding-left:$half-spacing-unit;
+	@include vendor(border-radius, 0px);
+}
+
+.select:after{
+	position:absolute;
+	font-size:12px;
+	color:$text-color;
+	right:0px;
+	top:5px;
+	content:"<>";
+	letter-spacing:5px;
+	max-width:0px;
+	max-height:0px;
+	overflow:visible;
+	@include vendor(transform, rotate(90deg));
+
+}
+
+
+%fade-focus-border{
+	@include vendor(transition, border-color .3s);
+
+	border-style:solid;
+	border-color:lighten($text-color, 50%);
+
+	&:focus, &:active{ border-color:$text-color; }
+}
+
+.form .result{
+	@include vendor(transition, opacity .4s linear);
+	opacity:0;
+	line-height:$base-spacing-unit;
+
+	&.error, &.success{ opacity:1 }
+	&.error{ color:$color-negative }
+	&.success{ color:$color-success }
+}
+
+.text-input{
+	@extend %fade-focus-border;
+	@include vendor(border-top-left-radius, 2px);
+	@include vendor(border-bottom-left-radius, 2px);
+
+	border-width:1px;
+}
+
+.signup-widget{
+	list-style-type:none;
+	margin:0px auto;
+	margin-bottom:$base-spacing-unit;
+	@include media-query(lap-and-up){ display:table }
+
+	li{
+		&:not(:first-child){ margin-top:$base-spacing-unit }
+		@include media-query(lap-and-up){
+			display:table-cell;
+			margin-top:0px;
+		}
+		vertical-align:top;
+	}
+
+	.email{
+		font-size:24px;
+		width:$base-spacing-unit*9;
+		text-align:center;
+		padding:$half-spacing-unit/2 2px;
+		border-left-width:0px;
+		border-right-width:0px;
+		border-top-width:0px;
+
+		@include vendor(border-radius, 0px);
+
+		@include media-query(lap-and-up){
+			width:$base-spacing-unit*14;
+			font-size:32px;
+		}
+	}
+
+	.submit{
+		margin-left:$half-spacing-unit;
+		height:40px;
+		line-height:40px;
+		padding-left:$base-spacing-unit;
+		padding-right:$base-spacing-unit;
+	}
+}

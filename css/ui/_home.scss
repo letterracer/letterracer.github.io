@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    $HOME.CSS
+\*------------------------------------*/
+
+.carousel{
+    text-align:center;
+    position:relative;
+}
+
+    .carousel__features{
+        display:none;
+        left:-9999px;
+    }
+
+    .carousel__nav{
+        li a{
+            text-decoration:none!important;
+            height:$half-spacing-unit;
+            width:$half-spacing-unit;
+            background-color:$text-color--darken2;
+            @include vendor(border-radius, 100%);
+
+            &.active{ background-color:$background-color--lighten3 }
+        }
+    }

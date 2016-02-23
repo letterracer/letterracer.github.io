@@ -1,0 +1,23 @@
+{% unless include.prototype %}<div class="grid__item  one-quarter  palm-one-half">
+    <a href="{{ post.url }}" data-date="{{ post.date | date: "%m-%d-%Y" }}" class="gridlink  show-list__show{% if posttime < nowtime %}  show--passed{% endif %}">
+        <div class="show__date">{% include display-date.html date=post.date %}</div>
+        {% if post.poster_url %}<img class="show__poster" src="{{ post.poster_url }}">{% else %}
+        <hgroup class="show__artists">
+            {% for artist in post.artists %}
+            <h5 class="color-negative{% if forloop.last != true %}  hN{% endif %}">{{ artist }}</h5>
+            {% endfor %}
+        </hgroup>
+        {% endif %}
+        <div class="show__city">{{ post.city }}</div>
+    </a>
+</div>{% else %}
+<div class="js-show-prototype  grid__item  one-quarter  palm-one-half  _prototype">
+    <a href="" data-date="" class="show-list__show">
+        <div class="show__date"></div>
+        <img class="gridlink__img  show__poster" src="">
+        <hgroup class="show__artists">
+            <h5 class="color-negative  hN  _prototype"></h5>
+        </hgroup>
+        <div class="show__city"></div>
+    </a>
+</div>{% endunless %}

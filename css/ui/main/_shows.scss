@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    $SHOWS.CSS
+\*------------------------------------*/
+
+.show{
+    text-align:center;
+
+    &.show--passed .show__date{
+        text-decoration:line-through;
+    }
+}
+
+    .show__heading{
+        border:solid $text-color 1px;
+        margin-bottom:$half-spacing-unit;
+    }
+
+
+    .show__artists{
+        margin-top:$base-spacing-unit;
+        text-align:center;
+    }
+
+    .show__price{
+        margin-bottom:0px;
+    }
+
+    .show__buttons{
+        margin-top:$base-spacing-unit;
+    }
+
+    .show__date,.show__venue{
+        @include media-query(palm){ clear:both;display:block; }
+    }
+
+
+.show-list{
+    &:hover{
+        .show-list__show:hover, .show-list__show:active{
+            .show__date{
+                text-decoration:underline;
+            }
+            
+            &.show--passed:hover .show__date{ text-decoration:line-through; }
+        } 
+    }
+}
+
+    .show-list__show{
+        border:solid 1px $text-color;
+        &, & img{ @extend %scalable }
+        color:$text-color;
+
+        &.show--passed{
+            border-style:dashed;
+        }
+
+    }
+
+._prototype{
+    display:none;
+    position:relative;
+    left:-9999px;
+    height:0px;
+
+}

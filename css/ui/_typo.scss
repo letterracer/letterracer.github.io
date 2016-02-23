@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    $TYPO.CSS
+\*------------------------------------*/
+@font-face {
+  font-family:'Letter Racer 10';
+  src:url($letter-racer-font-url);
+  font-weight:normal;
+  font-style:normal;
+}
+
+*{
+    font-family:'Letter Racer 10', Monaco, monospace;
+}
+
+a{
+  color:blue;
+}
+
+.brand-link{
+	text-transform:uppercase;
+	font-weight:300;
+}
+
+h1{
+  font-size:54px;
+  line-height:54px;
+
+  @include media-query(lap-and-up){
+    font-size:84px;
+    line-height:84px;
+  }
+}
+
+h2{
+  font-size:48px;
+  line-height:48px;
+
+  @include media-query(lap-and-up){
+    font-size:72px;
+    line-height:72px;
+  }
+}
+
+h3{
+  font-size:36px;
+  line-height:36x;
+
+  @include media-query(lap-and-up){
+    font-size:54px;
+    line-height:54px;
+  }
+}
+
+h4{
+  font-size:36px;
+  line-height:36px;
+
+  @include media-query(lap-and-up){
+    font-size:48px;
+    line-height:48px;
+  }
+}
+
+h5{
+  font-size:24px;
+  line-height:24px;
+
+  @include media-query(lap-and-up){
+    font-size:36px;
+    line-height:36px;
+  }
+}
+
+.fourohfour{
+  position:absolute;
+  width:100%;
+  top:50%;
+  margin-top:-3.625*$base-spacing-unit;
+  h1{ color:$beautons-negative }
+
+  &, & *{ text-align:center; }
+}

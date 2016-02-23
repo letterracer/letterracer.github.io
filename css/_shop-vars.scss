@@ -1,0 +1,8 @@
+/*------------------------------------*\
+    SHOP-VARS.SCSS
+\*------------------------------------*/
+$use-block-list:    true;
+
+$logo-img-url: #{"{{ 'logo.png' | asset_url }}"};
+$loading-img-url: #{"{{ 'loading.gif' | asset_url }}"};
+$letter-racer-font-url: #{"{{ 'LetterRacer10.ttf' | asset_url }}"};

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sass --watch letterracer.scss:letterracer.css --style compressed
+
+exit 0

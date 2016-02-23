@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    SPLASH.CSS
+\*------------------------------------*/
+
+.wb{
+    color:$background-color;
+    background:$text-color;
+
+    .btn--link{
+        border-color:$background-color;
+        color:$background-color;
+    }
+}
+
+.nav--splash{
+    margin-top:$base-spacing-unit;
+    margin-bottom:$base-spacing-unit;
+}
+
+    .nav--splash .nav__item{ padding-bottom:$half-spacing-unit }
+
+.page--splash{ margin-bottom:-$base-spacing-unit*6 }
+
+.media-player{
+    width:320px;
+    height:195px;
+    
+    @include media-query(lap-and-up){
+        height:390px;
+        width:640px;
+    }
+}
+
+
+.page-foot,.push-foot{
+    height:$base-spacing-unit*6;
+}
+
+
+.page-foot{
+    text-align:center;
+}
+
+    .page-foot__branding, .page-foot__ticker{
+        line-height:$base-spacing-unit*4;
+    }
+
+    .page-foot__ticker{
+        h3, h5{ line-height:$base-spacing-unit }
+        position:relative;
+        top:(-$half-spacing-unit*1.5) + 3px;
+        opacity:.7;
+        text-transform:uppercase;
+        display:inline-block;
+        padding:0px;
+        cursor:default;
+        margin:0px;
+    }
+
+    .page-foot__branding{
+        opacity:.8;
+        @include vendor(transition, opacity .4s);
+        &:hover{ opacity:1 }
+    }
+    .page-foot__copyright{
+        opacity:.6;
+        clear:both;
+        padding-top:$base-spacing-unit;
+    }

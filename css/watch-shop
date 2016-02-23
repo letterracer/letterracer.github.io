@@ -1,0 +1,6 @@
+#!/bin/sh
+
+SHOP_THEME_FOLDER="/Users/clark/Code/Shopify-Themes/datcomm/letter-racer-2-76969281/assets"
+sass --watch letterracer-shop.scss:$SHOP_THEME_FOLDER/letterracer-shop.scss.liquid --style compressed
+
+exit 0

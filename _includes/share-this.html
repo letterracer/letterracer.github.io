@@ -1,0 +1,21 @@
+<button class="[ btn  btn--natural  btn--secondary  btn--link  btn--reg ]  dropdown  share  js-share-this">
+    Share
+    <div class="dropdown__pane">
+        <ul class="[ nav  nav--fit  nav--social-sq ]  share__menu">
+
+          <li class="nav__link">
+              <a class="twitter" data-share="tweet" href="https://twitter.com/intent/tweet?text={{ include.title  }}&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+                  <i class="icon  icon--natural" data-icon="&#xF099"></i>
+              </a>
+          </li>
+          
+          
+          <li class="nav__link">
+              <a class="fb" data-share="fb-post" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}&t={{ incude.title  }}">
+                  <i class="icon  icon--small" data-icon="&#xF09A"></i>
+              </a>
+          </li>
+          
+        </ul>
+    </div>
+</button>

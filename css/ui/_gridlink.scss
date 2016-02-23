@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    $GRIDLINK.CSS
+\*------------------------------------*/
+.grid{
+    .gridlink{
+        opacity:1;
+        @include vendor(transition, opacity .3s);
+    }
+    
+    &:hover{
+        .gridlink{ opacity:.8 }
+
+        .gridlink:hover, .gridlink:active{
+            opacity:1;
+        } 
+    }
+
+}
+
+
+
+
+.gridlink{
+    display:block;
+
+    text-decoration:none;
+    text-transform:uppercase;
+    text-align:center;
+    font-size:22px;
+    margin-bottom:$base-spacing-unit;
+
+    @include media-query(lap-and-up){ font-size:28px; }
+
+}
+
+.gridlink:hover,.gridlink:active{
+	opacity:1;
+}
+
+	.gridlink__img{
+		@extend %scalable;
+	}
+
+	.gridlink__text{
+		text-transform:uppercase;
+		text-align:center;
+		padding-top:$half-spacing-unit;
+	}

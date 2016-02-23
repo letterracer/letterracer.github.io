@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    $BTN.CSS
+\*------------------------------------*/
+
+.btn{
+    position:relative;
+    &:active{ top:2px }
+}
+
+.btn--reg{
+    padding:$half-spacing-unit $base-spacing-unit;
+    font-size:18px;
+}
+
+.btn--slim{
+    font-size:18px;
+    height:18px;
+    line-height:0px;
+    width:$base-spacing-unit*6;
+    margin-bottom:$base-spacing-unit;
+}
+
+.btn--primary, .btn--secondary{
+    @extend .btn--hard;
+    text-transform:uppercase;
+}
+
+.btn--secondary{
+    background-color:inherit;
+    border-style:solid;
+    border-width:1px;
+
+    border-color:$text-color;
+    color:$text-color;
+
+    &.btn--positive{ color:$beautons-positive }
+    &.btn--negative{ color:$beautons-negative }
+}
+
+.btn--link{
+    &:hover,&:active{ text-decoration:underline; }
+}
+
+.btn--positive{
+    border-color:$beautons-positive;
+}
+
+.btn--negative{
+    border-color:$beautons-negative;
+}
+
+.btn--update{
+    border-color:blue;
+    color:blue;
+}
+
+.btn[disabled]{
+    cursor:not-allowed;
+    color:$text-color;
+    background-color:inherit;
+    border-color:$text-color;
+    opacity:.5;
+}

@@ -1,0 +1,98 @@
+/*------------------------------------*\
+    $HELPER.SCSS
+\*------------------------------------*/
+%force-max-height{
+	min-height: 100%;
+	height: auto;
+	display: block;
+}
+
+.color-positive{ color:$beautons-positive }
+.color-negative{ color:$beautons-negative }
+
+.transparent{ opacity:0; }
+
+/*img|div*/%scalable{
+	display:block;
+	width:100%!important;
+	max-width:100%;
+	margin:0px auto;
+	/* for divs with background images... */
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+.text-center{ text-align:center; }
+.text-right{ text-align:right; }
+
+.hidden{
+	display:none;
+	position:absolute;
+	left:-9999px;
+}
+.visible--lap-and-up{
+	display:none;
+	@include media-query(lap-and-up){ display:inherit }
+}
+
+.visible--palm{
+	display:inherit;
+	@include media-query(lap-and-up){ display:none }
+}
+
+.float-left{ float:left }
+.float-right{ float:right }
+
+// @mixin style-input-placeholder($color, $style, $opacity: 1, $for_form: false){
+// 	@if $for_form == true{
+// 		& ::-webkit-input-placeholder{
+// 			color:$color;
+// 			font-style:$style;
+// 			opacity:$opacity;
+// 		}
+// 		& :-moz-placeholder{
+// 			color:$color;
+// 			font-style:$style;
+// 			opacity:$opacity;
+// 		}
+
+// 		& ::-moz-placeholder{
+// 			color:$color;
+// 			font-style:$style;
+// 			opacity:$opacity;
+// 		}
+
+// 		& :-ms-input-placeholder{
+// 			color:$color;
+// 			font-style:$style;
+// 			opacity:$opacity;
+// 		}
+// 	}
+// 	@else
+// 	{
+// 		&::-webkit-input-placeholder{
+// 			color:$color;
+// 			font-style:$style;
+// 			opacity:$opacity;
+// 		}
+// 		&:-moz-placeholder{
+// 			color:$color;
+// 			font-style:$style;
+// 			opacity:$opacity;
+// 		}
+
+// 		&::-moz-placeholder{
+// 			color:$color;
+// 			font-style:$style;
+// 			opacity:$opacity;
+// 		}
+
+// 		&:-ms-input-placeholder{
+// 			color:$color;
+// 			font-style:$style;
+// 			opacity:$opacity;
+// 		}
+// 	}
+
+// }

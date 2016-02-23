@@ -1,0 +1,58 @@
+<div class="footer-container">
+  <div class="wrapper">
+    <div class="footer">
+      
+      <div class="grid">
+        <div class="grid__item  footer__branding">
+          <a title="Letter Racer" href="{{ site.url }}">
+            <img class="sprite  sprite--logo  sprite--logo-footer" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+          </a>
+        </div><!--
+     
+     --><div class="grid__item  seven-eighths lap-five-sixths palm-one-whole">
+          <div class="grid">
+            <div class="grid__item  footer__nav">
+              <ul class="nav  nav--footer">
+                <li class="nav__link{% if page.section == 'shows' %} current{% endif %}">
+                  <a href="/shows/">Shows</a>
+                </li>
+                <li class="nav__link">
+                  <a href="{{ site.shop_url }}">Shop</a>
+                </li>
+                <li class="nav__link">
+                  <a href="#mail-list">Mail List</a>
+                </li>
+                <li class="nav__link{% if page.section == 'about' %} current{% endif %}">
+                  <a href="/about/">About</a>
+                </li>
+                <li class="nav__link">
+                  <a href="{{ site.blog_url }}">Blog</a>
+                </li>
+                <li class="nav__link{% if page.section == 'contact' %} current{% endif %}">
+                  <a href="mailto:{{ site.email }}">Contact</a>
+                </li>
+              </ul>
+            </div><!---
+         --><div class="grid__item  footer__social">
+              {% include nav-social.html %}
+            </div>
+          </div>
+          <div class="grid  grid--rev">
+            <div class="grid__item  footer__return-to-top">
+              <a data-target="rtt-bottom" href="#top" class="menu-bar__rtt  js-anim">
+                <img id="rtt-bottom" class="sprite  sprite--rtt" src="/img/top.gif">
+              </a>
+            </div><!--
+         --><div class="grid__item  footer__copyright">
+              <span class="copyright">
+                All content Copyright &copy; {{ site.time | date: '%Y' }} Letter Racer.
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

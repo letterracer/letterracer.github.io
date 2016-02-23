@@ -1,0 +1,67 @@
+<script>
+$(window).ready(function() {
+today = new Date(new Date().toJSON().slice(0,10)  + " 00:00:00");
+lastPublishDate = new Date("{{ 'today' | date: "%m-%d-%Y" }}");
+
+{% unless page.title == 'Past Shows' %}
+if (today > lastPublishDate){
+    $.each($('.show-list__show'), function (key, show){
+        showDate = new Date($(show).data('date'));
+
+        if (showDate < today){
+            $(show).parent('div').remove();
+        }
+    });
+}
+{% else %}{% assign lastPublishDate = 'today' | date: "%Y-%m-%d" | date: "%s" %}
+
+{% assign posts = site.posts | reverse %}
+shows = {
+{% for post in posts %}{% assign showDate = post.date | date: "%s" %}{% unless showDate < lastPublishDate %}
+    "{{ post.date | date: "%m-%d-%Y" }}": {
+        "url": "{{ post.url }}",
+        "date": "{{ post.date | date: "%m-%d-%Y" }}",
+        "display_date": "{% include display-date.html date=post.date %}",
+        "artists": [{% for artist in post.artists %}"{{ artist }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
+        "city": "{{ post.city }}",
+        "poster_url": "{{ post.poster_url }}"
+    }{% unless forloop.last %},{% endunless %}
+{% endunless %}{% endfor %}
+};
+
+
+for (var key in shows){
+    showDate = new Date(shows[key].date);
+    if (showDate < today){
+        prependShow(shows[key]);
+    }
+}
+
+function prependShow(show){
+    newShow = $('.js-show-prototype').clone().removeClass('_prototype').removeClass('js-show-prototype');
+    
+    $(newShow).find('a').attr('href', show.url).attr('data-date', show.date).addClass('show--passed');
+    $(newShow).find('.show__date').html(show.display_date);
+    $(newShow).find('.show__city').html(show.city);
+
+    if (show.poster_url == null || show.poster_url == ''){
+        for (var key in show.artists){
+            newArtist = $(newShow).find("h5._prototype").clone().removeClass('_prototype');
+            $(newArtist).html(show.artists[key]);
+            $(newShow).find('.show__artists').append(newArtist);
+        }
+        $(newShow).find('.show__poster').remove();
+        $(newShow).find("h5._prototype").remove();
+        $(newShow).find(".show__artists  h5:last-child").removeClass("hN");
+    }
+    else{
+        $(newShow).find('.show__poster').attr('src', show.poster_url);
+        $(newShow).find('.show__artists').remove();
+    }
+
+    $(newShow).prependTo('.js-shows');
+}
+
+{% endunless %}
+});
+</script>

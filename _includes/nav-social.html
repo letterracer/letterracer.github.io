@@ -1,0 +1,30 @@
+<ul class="nav  nav--social">
+{% if site.twitter_handle %}
+  <li class="nav__link">
+      <a class="twitter" target="_blank" href="https://twitter.com/{{ site.twitter_handle }}" title="{{ site.twitter_handle }} on Twitter">
+          <i class="icon  icon--natural" data-icon="&#xF099"></i>
+      </a>
+  </li>
+{% endif %}
+{% if site.facebook_page_id %}
+  <li class="nav__link">
+      <a class="fb" target="_blank" href="https://www.facebook.com/{{ site.facebook_page_id }}/" title="{{ site.title }} on Facebook">
+          <i class="icon  icon--natural" data-icon="&#xF09A"></i>
+      </a>
+  </li>
+{% endif %}
+{% if site.instagram_username %}
+  <li class="nav__link">
+      <a class="instagram" target="_blank" href="https://instagram.com/{{ site.instagram_username }}/" title="{{ site.title }} on Instagram">
+          <i class="icon  icon--natural" data-icon="&#xF16D"></i>
+      </a>
+  </li>
+{% endif %}
+{% if site.youtube_channel_id %}
+  <li class="nav__link">
+      <a class="youtube" target="_blank" href="https://www.youtube.com/channel/{{ site.youtube_channel_id }}" title="{{ site.title }} on Youtube">
+          <i class="icon  icon--natural" data-icon="&#xF167"></i>
+      </a>
+  </li>
+{% endif %}
+</ul>

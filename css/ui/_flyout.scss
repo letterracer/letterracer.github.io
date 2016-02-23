@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    $FLYOUT.CSS
+\*------------------------------------*/
+.flyout:hover{
+    overflow:hidden;
+}
+
+.flyout:hover > .flyout__content{
+    left:-99999px;
+}
+
+.flyout.active{
+    overflow:visible;
+}
+
+.flyout.active > .flyout__content{
+    left:0;
+}

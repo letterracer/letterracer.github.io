@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    $SHARE.CSS
+\*------------------------------------*/
+.share{ width:$base-spacing-unit*4; }
+
+.share__menu{ margin:0px auto }
+
+.share .dropdown__pane{
+    padding-top:$half-spacing-unit*1.25;
+    padding-left:$base-spacing-unit/6;
+}
+
+.share__menu{
+    @include arrow(top, center, $text-color);
+    // &:before, &:after{ left:42.5%; }
+    padding:$half-spacing-unit;
+
+    background-color:$text-color;
+    margin-bottom:0px;
+
+    text-align:left;
+
+    .nav__link{
+        line-height:$base-spacing-unit;
+        a{ color:$background-color }
+    }
+}

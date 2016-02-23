@@ -1,0 +1,54 @@
+---
+layout: default
+---
+{% capture nowtime %}{{ 'today' | date: '%s' }}{% endcapture %}
+{% capture posttime %}{{ page.date | date: '%s' }}{% endcapture %}
+<div class="show{% if posttime < nowtime %}  show--passed{% endif %}">
+    <div class="show__heading">
+        <hgroup>
+            {% if page.title %}
+            <h1 class="hN">{{ page.title }}</h1>
+            <h4 class="hN  color-negative">{% for artist in page.artists %}{{ artist }}{% if forloop.last != true %}, {% endif %}{% endfor %}</h4>
+            {% else %}
+            <h1 class="hN  color-negative">{% for artist in page.artists %}{{ artist }}{% if forloop.last != true %}, {% endif %}{% endfor %}</h1>
+            {% endif %}
+            <h5 class="hN">
+                <span class="show__date">{% if page.doors %}{{ page.doors }} {% endif %}{{ page.date | date: "%a, %b %d %Y" }}</span>
+                <span class="show__venue">@ {% if page.venue_location %}<a target="_blank" href="https://www.google.com/maps/place/{{ page.venue_location }}" title="Map">{{ page.venue }} [{{ page.city }}]</a>{% else %}{{ page.venue }} [{{ page.city }}]{% endif %}</span>
+            </h5>
+            
+        </hgroup>
+        {% if page.poster_url %}<img class="show__poster" src="{{ page.poster_url }}">{% endif %}
+        {% if page.ticket_price %}<h4 class="show__price  color-positive">=== {{ page.ticket_price }} ===</h4>{% endif %}
+        
+        <ul class="nav  show__buttons">
+        {% if page.rsvp_url %}
+        <li class="nav__item">
+            <a target="_blank" class="btn  btn--secondary  btn--reg  btn--link  btn--natural" href="{{ page.rsvp_url }}">
+                RSVP
+            </a>
+        </li>
+        {% endif %}
+        {% if page.ticket_url %}
+        <li class="nav__item">
+            <a target="_blank" class="btn  btn--natural  btn--secondary  btn--link  btn--reg" href="{{ page.ticket_url }}">
+                Tickets
+            </a>
+        </li>
+        {% endif %}
+        {% capture title %}{% for artist in page.artists %}{{ artist }}{% if forloop.last != true %}, {% endif %}{% endfor %} @ {{ page.venue }} ({{ page.city }}){% endcapture %}
+        <li class="nav__item">
+        {% include share-this.html title=title %}
+        </li>
+
+    </ul>
+    <div class="show__description">
+        {{ content }}
+    </div>
+    </div>
+
+    <a class="link-complex" href="/shows/">
+        <i class="icon  icon--tiny" data-icon="&#xF060"></i> <span class="link-complex__target">SHOWS</span>
+    </a>
+
+</div>

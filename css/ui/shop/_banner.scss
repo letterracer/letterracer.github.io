@@ -1,0 +1,103 @@
+/*------------------------------------*\
+    BANNER.CSS
+\*------------------------------------*/
+
+.banner{
+    display:block;
+    position:relative;
+    padding:0px;
+    text-decoration:none;
+    text-align:center;
+    margin-bottom:$base-spacing-unit;
+}
+
+.banner--alt{
+    border:solid $text-color 1px;
+    // background:lighten($color-highlight, 12%);
+    height:$base-spacing-unit*6;
+
+    .banner__title{
+        position:relative;
+        top:$base-spacing-unit*1.875;
+        
+        @include media-query(lap-and-up){
+            top:$base-spacing-unit*1.25;
+        }
+    }
+}
+
+
+    .banner__img{
+        position:relative;
+        display:block;
+        top:0px;
+        left:0px;
+        width:100%;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position-x:center;
+        background-color:darken($background-color, 5%);
+    }
+
+    .banner__title{
+        cursor:default;
+        margin-bottom:0px;
+        padding:0px $base-spacing-unit;
+        background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP4/xQAAuYB5e33aXgAAAAASUVORK5CYII=);
+        text-transform:uppercase;
+        font-weight:200px;
+        z-index:600;
+        color:$text-color;
+        display:inline-block;
+    }
+
+    .banner__title--bottom-right, .banner__title--bottom-left{
+        position:absolute;
+        bottom:$half-spacing-unit/2;
+    }
+
+    .banner__title--bottom-right{
+        right:$half-spacing-unit/2;
+    }
+
+    .banner__title--bottom-left{
+        left:$half-spacing-unit/2;
+    }
+
+    .banner__title--bottom-center{
+        /* h5 height + margin */
+        $title-offset: ($base-spacing-unit*1.5)+($half-spacing-unit/2);
+        $title-offset-mobile: ($base-spacing-unit)+($half-spacing-unit/2);
+        position:relative;
+        top:-$title-offset-mobile;
+
+        @include media-query(lap-and-up){
+            top:-$title-offset;
+        }
+    }
+
+    .banner__title--center-center{
+        $banner-height: 288px;
+        $title-offset:($banner-height/2)+($base-spacing-unit*.75);
+        $title-offset-mobile:($banner-height/2)+$half-spacing-unit;
+        position:relative;
+        top:-$title-offset-mobile;
+
+        @include media-query(lap-and-up){
+            top:-$title-offset;
+        }
+    }
+
+
+
+.banner-stack{
+    @extend .nav;
+    @extend .nav--stacked;
+}
+
+    .banner-stack__banner{
+        &:not(:last-child){
+            padding-bottom:$half-spacing-unit;
+            @include media-query(lap-and-up){ padding-bottom:$base-spacing-unit; }
+        }
+    }
