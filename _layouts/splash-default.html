@@ -4,7 +4,7 @@
 {% include head.html nocache=true %}
 
 
-<body onload="startTicker()">
+<body{% if page.clock == true %} onload="startTicker()"{% endif %}>
 
 <div class="page  page--splash  text-center">
   {% include header.html %}
@@ -24,7 +24,9 @@
 {% include mail-list-modal.html %}
 
 <script src="/js/vendors.js"></script>
+<script src="/js/preload.min.js"></script>
 <script src="/js/main.js"></script>
+{% if page.clock == true %}
 <script>
 function startTicker() {
     now = new Date();
@@ -60,6 +62,7 @@ function parseTime(time) {
   return h + ":" + m + " " + ampm;
 }
 </script>
+{% endif %}
 
 </body>
 

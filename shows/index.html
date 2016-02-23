@@ -5,7 +5,7 @@ section: shows
 scripts: update-shows-js.html
 ---
 
-{% assign nowtime = 'today' | date: "%Y-%m-%d" | date: '%s' %}{% assign upcoming_shows = false %}{% assign past_shows = false %}{% for post in site.posts %}{% assign posttime = post.date | date: "%Y-%m-%d" | date: '%s' %}% if posttime > nowtime %}{% assign upcoming_shows = true %}{% else %}{% assign past_shows = true %}{% endif %}{% endfor %}
+{% assign nowtime = 'today' | date: "%Y-%m-%d" | date: '%s' %}{% assign upcoming_shows = false %}{% assign past_shows = false %}{% for post in site.posts %}{% assign posttime = post.date | date: "%Y-%m-%d" | date: '%s' %}{% if posttime > nowtime %}{% assign upcoming_shows = true %}{% else %}{% assign past_shows = true %}{% endif %}{% endfor %}
 {% assign posts = site.posts | sort: 'date' %}
 
 {% if upcoming_shows == false %}
