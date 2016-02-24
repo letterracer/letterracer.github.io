@@ -58,7 +58,8 @@ If the show's poster image isn't available online, you can upload it to ```/img/
 Then set the __poster_url__ like:
 >/img/shows/__image-filename.png__
 
-
+### Save & commit the new file
+Scroll to the bottom of the page and click "Commit new file".
 
 ### Examples
 
