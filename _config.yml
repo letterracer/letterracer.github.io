@@ -52,3 +52,4 @@ defaults:
         layout: post
         section: shows
         twitter_card: summary
+        title: ""
