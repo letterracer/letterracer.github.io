@@ -1,4 +1,4 @@
-{% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}{% capture title %}{% if page.title != null %}{{ page.title }}{% elsif page.artists && page.venue %}{% for artist in page.artists %}{{ artist }}{% if forloop.last != true %}, {% endif %}{% endfor %} @ {{ page.venue }} ({{ page.city }}){% endif %}{% endcapture %}
+{% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}{% capture title %}{% unless page.artists and page.city %}{{ page.title }}{% else %}{% unless page.title == null %}{{ page.title }}{% else %}{% for artist in page.artists %}{{ artist }}{% if forloop.last != true %}, {% endif %}{% endfor %} {% unless page.venue == null %}@ {{ page.venue }} ({% else %} in {% endunless %}{{ page.city }}{% unless page.venue == null %}){% endunless %}{% endunless %}{% endunless %}{% endcapture %}
 
 <head>
     <meta charset="UTF-8">
