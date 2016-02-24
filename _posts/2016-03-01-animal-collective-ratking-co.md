@@ -1,5 +1,5 @@
 ---
-title: 
+show_title: 
 artists: [Animal Collective, RATKING]
 doors: TBA
 city: DENVER, CO

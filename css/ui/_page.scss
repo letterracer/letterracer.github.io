@@ -89,7 +89,6 @@ body{
 	@extend %force-max-height;
 	clear:both;
 	position:relative;
-	padding-bottom:$base-spacing-unit;
 
 	margin-bottom:-$base-spacing-unit*7;
 	@include media-query(lap-and-up){ margin-bottom:-$base-spacing-unit*3.5 }

@@ -1,5 +1,5 @@
 ---
-title: COLLEGE TOUR 2016
+show_title: COLLEGE TOUR 2016
 artists: [WIKI, DJ LUCAS]
 doors: TBA
 city: SUNY Purchase

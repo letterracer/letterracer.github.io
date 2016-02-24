@@ -1,5 +1,5 @@
 ---
-title:
+show_title:
 artists: [Wiki, Antwon]
 doors: 
 city: WASHINGTON, DC

@@ -1,5 +1,5 @@
 ---
-title:
+show_title:
 artists: [RATKING]
 doors: 7:30pm 
 city: LAKEWOOD, OH

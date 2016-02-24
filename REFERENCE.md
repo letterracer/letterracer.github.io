@@ -16,7 +16,7 @@ Copy and paste this (including - - - on top and bottom) into the new file:
 
 ```html
 ---
-title: 
+show_title: 
 artists: []
 doors: 
 city: 
@@ -31,7 +31,7 @@ poster_url:
 
 Only __artists__ and __city__ are required.
 
-> __title__ -- Show or tour title
+> __show_title__ -- Show or tour title
 
 > __artists__ -- Comma-separated list of artists inside brackets [ ].
 
@@ -66,7 +66,7 @@ Then set the __poster_url__ like:
 `2016-02-23-animal-collective-ratking-ny.md`
 ```
 ---
-title: 
+show_title: 
 artists: [Animal Collective, RATKING]
 doors: TBA
 city: NEW YORK, NY
@@ -87,7 +87,7 @@ letterracer.com/shows/animal-collective-ratking-ny--02-23-2016/
 `2016-02-06-wiki-dj-lucas-wesleyan.md`
 ```
 ---
-title: COLLEGE TOUR 2016
+show_title: COLLEGE TOUR 2016
 artists: [WIKI, DJ LUCAS]
 doors: TBA
 city: Wesleyan University

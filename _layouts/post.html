@@ -3,14 +3,15 @@ layout: default
 ---
 {% capture nowtime %}{{ 'today' | date: '%s' }}{% endcapture %}
 {% capture posttime %}{{ page.date | date: '%s' }}{% endcapture %}
+{% capture artists %}{% for artist in page.artists %}{{ artist }}{% if forloop.last != true %}, {% endif %}{% endfor %}{% endcapture %}
 <div class="show{% if posttime < nowtime %}  show--passed{% endif %}">
     <div class="show__heading">
         <hgroup>
-            {% if page.title != "" %}
-            <h1 class="hN">{{ page.title }}</h1>
-            <h4 class="hN  color-negative">{% for artist in page.artists %}{{ artist }}{% if forloop.last != true %}, {% endif %}{% endfor %}</h4>
+            {% if page.show_title != null %}
+            <h1 class="hN">{{ page.show_title }}</h1>
+            <h4 class="hN  color-negative">{{ artists }}</h4>
             {% else %}
-            <h1 class="hN  color-negative">{% for artist in page.artists %}{{ artist }}{% if forloop.last != true %}, {% endif %}{% endfor %}</h1>
+            <h1 class="hN  color-negative">{{ artists }}</h1>
             {% endif %}
             <h5 class="hN">
                 <span class="show__date">{% if page.doors %}{{ page.doors }} {% endif %}{{ page.date | date: "%a, %b %d %Y" }}</span>
@@ -36,7 +37,7 @@ layout: default
             </a>
         </li>
         {% endif %}
-        {% capture title %}{% for artist in page.artists %}{{ artist }}{% if forloop.last != true %}, {% endif %}{% endfor %} @ {{ page.venue }} ({{ page.city }}){% endcapture %}
+        {% capture title %}{{ page.date | date: "%m/%d" }}: {{ artists }} {% unless page.venue == null %}@ {{ page.venue }} ({% else %} in {% endunless %}{{ page.city }}{% unless page.venue == null %}){% endunless %}{% endcapture %}
         <li class="nav__item">
         {% include share-this.html title=title %}
         </li>

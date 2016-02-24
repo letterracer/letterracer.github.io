@@ -1,5 +1,5 @@
 ---
-title:
+show_title:
 artists: [Wiki, Antwon]
 doors: 7:30
 city: TORONTO, ON

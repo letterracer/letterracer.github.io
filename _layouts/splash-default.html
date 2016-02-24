@@ -7,7 +7,6 @@
 <body{% if page.clock == true %} onload="startTicker()"{% endif %}>
 
 <div class="page  page--splash  text-center">
-  {% include header.html %}
   {% if content %}
   <div class="page__content">
     {{ content }}
@@ -16,6 +15,9 @@
     {% endif %}
   </div>
   {% endif %}
+  <div class="splash-nav-container">
+    <div class="wrapper">{% include nav-main.html %}</div>
+  </div>
   <div class="push-foot"></div>
 </div>
 

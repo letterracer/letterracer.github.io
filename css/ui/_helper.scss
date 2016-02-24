@@ -32,12 +32,10 @@
 	left:-9999px;
 }
 .visible--lap-and-up{
-	display:none;
-	@include media-query(lap-and-up){ display:inherit }
+	@include media-query(palm){ display:none }
 }
 
 .visible--palm{
-	display:inherit;
 	@include media-query(lap-and-up){ display:none }
 }
 

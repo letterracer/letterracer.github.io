@@ -21,6 +21,12 @@
 
 .page--splash{ margin-bottom:-$base-spacing-unit*6 }
 
+.splash-nav-container{
+    position:absolute;
+    width:100%;
+    bottom:$base-spacing-unit*7; /* footer height + $base-spacing-unit */
+}
+
 .media-player{
     width:320px;
     height:195px;
@@ -49,18 +55,18 @@
         h3, h5{ line-height:$base-spacing-unit }
         position:relative;
         top:(-$half-spacing-unit*1.5) + 3px;
-        opacity:.7;
+        opacity:.6;
         text-transform:uppercase;
         display:inline-block;
         padding:0px;
         cursor:default;
         margin:0px;
+
+        @include media-query(palm){ min-height:$base-spacing-unit*3.5 }
     }
 
     .page-foot__branding{
-        opacity:.8;
-        @include vendor(transition, opacity .4s);
-        &:hover{ opacity:1 }
+        opacity:.7;
     }
     .page-foot__copyright{
         opacity:.6;
