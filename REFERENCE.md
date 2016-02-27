@@ -51,13 +51,6 @@ Only __artists__ and __city__ are required.
 
 > __poster_url__ -- URL to the show's handbill image.
 
-#### Set the poster image
-
-If the show's poster image isn't available online, you can upload it to ```/img/shows/```.
-
-Then set the __poster_url__ like:
->/img/shows/__image-filename.png__
-
 ### Save & commit the new file
 Scroll to the bottom of the page and click "Commit new file".
 
