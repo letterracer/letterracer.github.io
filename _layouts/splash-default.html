@@ -28,40 +28,15 @@
 <script src="/js/vendors.js"></script>
 <script src="/js/preload.min.js"></script>
 <script src="/js/main.js"></script>
+<script src="/bower_components/moment/min/moment.min.js"></script>
+<script src="/bower_components/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
 {% if page.clock == true %}
 <script>
 function startTicker() {
-    now = new Date();
-    utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-    nowNyc = new Date(utc - (3600000*5));
-    document.getElementById('ticker').innerHTML = parseTime(nowNyc);
+    var now = moment();
+    var nowNyc = moment.tz(now, "America/New_York").format("hh:mm a");
+    document.getElementById('ticker').innerHTML = nowNyc;
     setTimeout(startTicker, 500);
-}
-
-function parseTime(time) {
-  h = time.getHours();
-  m = time.getMinutes();
-  ampm = "am";
-
-  if (h > 11) {
-    ampm = "pm";
-  }
-  if (h == 0) {
-    h = 12;
-  }
-  if (h > 12) {
-    h = h-12;
-  }
-  if (h < 10)
-  {
-    h = "0" + h;
-  }
-  if (m < 10)
-  {
-    m = "0" + m;
-  }
-
-  return h + ":" + m + " " + ampm;
 }
 </script>
 {% endif %}
