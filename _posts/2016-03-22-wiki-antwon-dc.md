@@ -1,12 +1,12 @@
 ---
 show_title:
 artists: [Wiki, Antwon]
-doors: 
-city: WASHINGTON, DC
+doors: 9PM
+city: Baltimore, MD
 venue: U Street Music Hall
-venue_location: 1115 U St NW, Washington, DC 20009
-ticket_price: $20
-ticket_url: https://www.ticketfly.com/purchase/event/1093739?utm_medium=bks
+venue_location: 2nd Floor 1910 N Charles St, Baltimore, MD 21218
+ticket_price: $7
+ticket_url: 
 rsvp_url:
 poster_url: https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/12552400_523191767858958_1151713177_n.jpg
 ---
