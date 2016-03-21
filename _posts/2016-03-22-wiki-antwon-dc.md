@@ -3,7 +3,7 @@ show_title:
 artists: [Wiki, Antwon]
 doors: 9PM
 city: Baltimore, MD
-venue: U Street Music Hall
+venue: The Crown
 venue_location: 2nd Floor 1910 N Charles St, Baltimore, MD 21218
 ticket_price: $7
 ticket_url: 
