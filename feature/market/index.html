@@ -16,7 +16,7 @@
     <meta property="og:description" content="T-shirt, zine, and video stream available at letterracer.com"/>
     <meta property="og:image" content="http://letterracer.com/img/splash-market/screenshot.jpg" />
     <meta name="description" content="T-shirt, zine, and video stream available at letterracer.com">
-    
+
     <link rel="apple-touch-icon-precomposed" href="/img/logo.png">
     <link rel="shortcut icon" href="/img/logo.png" type="image/icon">
     <link rel="icon" href="/img/logo.png" type="image/icon">
@@ -24,25 +24,25 @@
 
     <title>MARKET</title>
     <link rel="stylesheet" href="http://letterracer.com/css/letterracer.css">
-    <link rel="stylesheet" href="css/market/market.min.css">
+    <link rel="stylesheet" href="http://letterracer.com/css/ui/main/splash-market/market.min.css">
 
-    <script src="js/mobile.min.js"></script>
+    <script src="http://letterracer.com/js/mobile.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/responsive-imagemaps.min.js"></script>
+    <script src="http://letterracer.com/js/responsive-imagemaps.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){$("img[usemap]").rwdImageMaps()});
-        function loadScriptQueue(){   
+        function loadScriptQueue(){
             var scriptQueue = [
                 "https://www.youtube.com/iframe_api",
                 "https://gumroad.com/js/gumroad.js",
-                "js/market.min.js"
+                "http://letterracer.com/js/splash-market.min.js"
             ];
             var firstScriptTag = document.getElementsByTagName('script')[0];
             for (i=0; i<scriptQueue.length; i++) {
                 tag = document.createElement('script');
                 tag.src = scriptQueue[i];
                 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-            } 
+            }
         }
         $(document).ready(function(){
             md = new MobileDetect(window.navigator.userAgent);
@@ -54,8 +54,8 @@
 
 <body>
 <div class="splash-page">
-    <img usemap="#splash" class="splash" src="img/splash-market/zhu_splash.png" name="zhu_splash">
-    <img class="tv-black" src="img/splash-market/market.gif">
+    <img usemap="#splash" class="splash" src="http://letterracer.com/img/splash-market/zhu_splash.png" name="zhu_splash">
+    <img class="tv-black" src="http://letterracer.com/img/splash-market/market.gif">
     <div class="tv">
         <div id="player" class="tv__video"></div>
     </div>
@@ -65,8 +65,8 @@
     <area class="js-watch-tv" shape="poly" href="https://youtu.be/3FHsu6UB1yw" coords="261,143,517,140,749,156,747,300,727,447,507,461,277,446,264,308">
     <area class="js-watch-tv" shape="poly" href="https://youtu.be/3FHsu6UB1yw" coords="476,593,486,584,501,582,516,585,523,592,514,600,496,602,484,599">
     <area target="_blank" shape="poly" href="http://shop.letterracer.com/products/market-tee-shirt" coords="276,686,321,671,424,674,499,669,493,709,371,716,340,710,316,715">
-    <area target="_blank" shape="poly" href="market.html" coords="592,672,619,659,640,668,680,668,718,664,732,694,708,710,692,702,668,709,646,702,610,707,602,704">
-    
+    <area target="_blank" shape="poly" href="http://letterracer.com/feature/market/market.html" coords="592,672,619,659,640,668,680,668,718,664,732,694,708,710,692,702,668,709,646,702,610,707,602,704">
+
     <area class="fullscreen" shape="poly" coords="665,477,744,476,744,487,665,487">
     <area class="js-player-volup" shape="poly" href="#" coords="374,587,387,586,388,595,375,597">
     <area class="js-player-voldown" shape="poly" href="#" coords="351,585,368,585,367,596,353,597">
@@ -75,7 +75,7 @@
 
 <div class="page-foot">
     <a class="branding" href="http://blog.letterracer.com"><img src="http://letterracer.com/img/logo.png" width="100" height="100"></a>
-    <div class="copyright">Copyright &copy; 2016 Letter Racer</div>
+    <div class="copyright">Copyright &copy; 2015 Letter Racer</div>
 </div>
 </body>
 </html>
