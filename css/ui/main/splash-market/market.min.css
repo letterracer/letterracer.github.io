@@ -1,0 +1,7 @@
+/*!
+ * 
+ * letterracer.com
+ * market splash page by eemshi
+ *
+ */
+html,body{min-height:100%;height:100%;display:block}a{color:#000}html,body{background-color:#fff;color:#000}.splash-page,.splash,.tv{position:relative;width:1000px;height:750px}@media only screen and (max-width: 1023px){.splash-page,.splash,.tv{width:800px;height:600px}}.splash-page{margin:0px auto}.splash{position:absolute;top:0px;left:0px;z-index:2}.tv-black{position:absolute;z-index:0;left:258px;top:105px;width:492px;height:400px}@media only screen and (max-width: 1023px){.tv-black{left:206px;top:84px;width:394px;height:320px;background-size:100%}}.tv{position:relative;opacity:0;z-index:-2}.tv.active{z-index:1;opacity:1}.tv__video{position:absolute}.tv__video{z-index:9;top:133px;left:206px;width:592px;height:333px}@media only screen and (max-width: 1023px){.tv__video{top:106px;left:174px;width:456px;height:266px}}.page-foot{text-align:center;margin-top:12px;width:100%;font-weight:300}.page-foot .copyright{margin-top:5px;margin-bottom:12px}
