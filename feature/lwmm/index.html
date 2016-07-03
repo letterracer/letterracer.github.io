@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ratking">
+    <meta name="twitter:domain" content="letterracer.com">
+    <meta name="twitter:creator" content="@ratking">
+    <meta name="twitter:title" content="LIVING WITH MY MOMS">
+    <meta name="twitter:image:src" content="http://letterracer.com/img/splash-lwmm/flying1.jpg">
+    <meta name="twitter:description" content="LIL ME coming soon">
+
+    <meta property="og:image" content="http://letterracer.com/img/splash-lwmm/screenshot.png" />
+
+    <meta name="description" content="LIL ME coming soon">
+
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-STORE">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+
+    <link rel="canonical" href="http://letterracer.com">
+
+    <title>LIVING WITH MY MOMS</title>
+
+    <link rel="stylesheet" href="http://letterracer.com/css/ui/main/splash-lwmm.css">
+
+    <script src="http://letterracer.com/js/mobile.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://letterracer.com/js/responsive-imagemaps.min.js"></script>
+
+    <script language="javascript">
+        $(document).ready(function(){$("img[usemap]").rwdImageMaps()});
+
+        Image1A = new Image(170,280)
+        Image1A.src = "http://letterracer.com/img/splash-lwmm/panel1.gif"
+        Image1B = new Image(170,280)
+        Image1B.src = "http://letterracer.com/img/splash-lwmm/panel1_static.jpg"
+        Image2A = new Image(192,347)
+        Image2A.src = "http://letterracer.com/img/splash-lwmm/panel2.gif"
+        Image2B = new Image(192,347)
+        Image2B.src = "http://letterracer.com/img/splash-lwmm/panel2_static.jpg"
+        Image3A = new Image(144,180)
+        Image3A.src = "http://letterracer.com/img/splash-lwmm/panel3.gif"
+        Image3B = new Image(192,347)
+        Image3B.src = "http://letterracer.com/img/splash-lwmm/panel3_static.jpg"
+        Image4A = new Image(184,226)
+        Image4A.src = "http://letterracer.com/img/splash-lwmm/panel4.gif"
+        Image4B = new Image(192,347)
+        Image4B.src = "http://letterracer.com/img/splash-lwmm/panel4_static.jpg"
+
+        function panel1Go() {
+        document.panel1.src = Image1A.src; return true;
+        }
+        function panel1Stop() {
+        document.panel1.src = Image1B.src; return true;
+        }
+        function panel2Go() {
+        document.panel2.src = Image2A.src; return true;
+        }
+        function panel2Stop() {
+        document.panel2.src = Image2B.src; return true;
+        }
+        function panel3Go() {
+        document.panel3.src = Image3A.src; return true;
+        }
+        function panel3Stop() {
+        document.panel3.src = Image3B.src; return true;
+        }
+        function panel4Go() {
+        document.panel4.src = Image4A.src; return true;
+        }
+        function panel4Stop() {
+        document.panel4.src = Image4B.src; return true;
+        }
+
+        function loadScriptQueue(){
+            var scriptQueue = [
+                "https://gumroad.com/js/gumroad.js",
+                "http://letterracer.com/js/splash-lwmm.min.js"
+            ];
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            for (i=0; i<scriptQueue.length; i++) {
+                tag = document.createElement('script');
+                tag.src = scriptQueue[i];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            }
+        }
+
+        $(document).ready(function(){
+            md = new MobileDetect(window.navigator.userAgent);
+            if (md.mobile() === null) {
+                loadScriptQueue();
+            }
+        });
+    </script>
+</head>
+
+<body>
+<header>&nbsp;</header>
+<div class="splash-page">
+    <img usemap="#panels" class="panels" src="http://letterracer.com/img/splash-lwmm/moms_splash.png" name="moms_splash">
+    <img name="panel1" class="panel1" src="http://letterracer.com/img/splash-lwmm/panel1_static.jpg">
+    <img name="panel2" class="panel2" src="http://letterracer.com/img/splash-lwmm/panel2_static.jpg">
+    <img name="panel3" class="panel3" src="http://letterracer.com/img/splash-lwmm/panel3_static.jpg">
+    <img name="panel4" class="panel4" src="http://letterracer.com/img/splash-lwmm/panel4_static.jpg">
+</div>
+
+<map name="panels">
+    <area shape="poly" href="https://youtu.be/nRIbNNDXV0E" coords="544,111,588,106,612,104,641,93,681,86,685,163,681,211,681,257,683,294,682,358,668,364,645,358,583,357,540,361,532,333,534,288,529,260,542,211,540,187,536,155" onMouseOver="panel1Go()" onMouseOut="panel1Stop()">
+    <area target="_blank" shape="poly" href="http://shop.letterracer.com" coords="713,78,751,69,791,73,819,70,845,82,847,148,840,173,842,192,840,224,845,247,841,321,840,372,842,417,782,411,723,413,722,377,711,351,709,302,713,234,713,180,709,139,707,118" onMouseOver="panel2Go()" onMouseOut="panel2Stop()">
+    <area shape="poly" target="_blank" href="http://wikset.nyc" coords="708,450,753,454,825,450,846,453,849,483,848,506,837,539,837,558,840,573,843,598,849,620,798,613,749,604,711,600,715,553,711,506,707,473" onMouseOver="panel3Go()" onMouseOut="panel3Stop()">
+    <area shape="poly" href="http://blog.letterracer.com" coords="528,399,594,392,643,396,670,393,679,398,680,501,680,596,627,599,561,612,520,617,521,577,528,552,521,532,526,502,523,474" onMouseOver="panel4Go()" onMouseOut="panel4Stop()">
+</map>
+
+<a id="gr_link" href="https://gumroad.com/l/HzKZF"></a>
+
+<footer class="page-foot">
+    <a class="branding" href="http://blog.letterracer.com">
+        <img src="img/logo.png" width="100" height="100">
+    </a>
+    <div class="copyright">
+        Copyright &copy; 2015 Letter Racer
+    </div>
+</footer>
+
+</body>
+</html>

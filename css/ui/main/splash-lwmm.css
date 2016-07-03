@@ -1,0 +1,121 @@
+/*!
+ * 
+ * lwmm splash page by eemshi
+ *
+ */
+    
+html,body{
+    display:block;
+    background-color:#fff;
+    color:#000}
+     
+a{color:#000}
+
+.brand-link{
+    text-transform:uppercase;
+    font-weight:300}
+     
+header {
+    width:100%;
+    height: 15px;
+}
+    
+body{font-weight:300}
+     
+.splash-page,.panels{
+    position:relative;
+    width:971px;
+    height:750px}
+     
+@media only screen and (max-width: 1023px){
+    .splash-page,.panels{
+        width:777px;
+        height:600px}}
+
+.splash-page{margin:0px auto}
+
+.panels{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:1}
+
+.panel1{
+    position:absolute;
+    z-index:0;
+        left:530px;
+        top:85px;
+        width:170px;
+        height:280px;}
+    
+.panel2{
+    position:absolute;
+    z-index:0;
+        left:683px;
+        top:70px;
+        width:192px;
+        height:347px;}
+    
+.panel3{
+    position:absolute;
+    z-index:0;
+        left:705px;
+        top:450px;
+        width:144px;
+        height:180px;}
+    
+.panel4{
+    position:absolute;
+    z-index:0;
+        left:510px;
+        top:392px;
+        width:184px;
+        height:226px;}
+     
+@media only screen and (max-width: 1023px){
+    .panel1{
+        left:424px;
+        top:68px;
+        width:136px;
+        height:224px;
+        background-size:100%}
+    .panel2{
+        left:546px;
+        top:56px;
+        width:153px;
+        height:278px;
+        background-size:100%}
+    .panel3{
+        left:563px;
+        top:360px;
+        width:115px;
+        height:144px;
+        background-size:100%}
+    .panel4{
+        left:408px;
+        top:314px;
+        width:147px;
+        height:181px;
+        background-size:100%}}
+    
+.page-foot{
+    text-align:center;
+    margin-top:12px;
+    width:100%;
+    font-weight:300;
+    text-transform:uppercase;
+    font-size:12px;
+    vertical-align:top}
+     
+.page-foot .branding,.page-foot .copyright{opacity:.6}
+     
+.page-foot .branding{
+    -webkit-transition:opacity 0.4s;
+    -moz-transition:opacity 0.4s;
+    -ms-transition:opacity 0.4s;
+    -o-transition:opacity 0.4s;
+    transition:opacity 0.4s}
+     
+.page-foot .branding:hover{opacity:1}
+     
+.page-foot .copyright{font-size:10px}
