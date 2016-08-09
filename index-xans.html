@@ -21,7 +21,12 @@
         body {
           background-image: url('/img/splash-xans/background.gif');
           background-size: cover;
-          text-align: center;}
+          text-align: center;
+          height: 100%;}
+        .container {
+          width: 100%;
+          height: 100%;
+        }
         .splash, .title, .tv, .support {
           width: 700px;
           margin: 0 auto;}
@@ -49,11 +54,13 @@
     </style>
 </head>
 <body>
-    <div class="dim"></div>
-    <div class="splash">
-      <div class="title"><img src="/img/splash-xans/title.png"/></div>
-      <div class="tv"><div id="player" class="tv__video"></div>
-      <div class="support"><a href="http://shop.letterracer.com/"><img src="/img/splash-xans/support.jpg"/></a></div>
+    <div class="container">
+      <div class="dim"></div>
+      <div class="splash">
+        <div class="title"><img src="/img/splash-xans/title.png"/></div>
+        <div class="tv"><div id="player" class="tv__video"></div></div>
+        <div class="support"><a href="http://shop.letterracer.com/"><img src="/img/splash-xans/support.jpg"/></a></div>
+      </div>
     </div>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://www.youtube.com/iframe_api"></script>
@@ -65,9 +72,9 @@
 
     function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '394',
-          width: '700',
-          videoId: '0vyzIp12DRQ',
+          height: '358',
+          width: '636',
+          videoId: 'xAaknhj8Z3w',
           playerVars: { 'controls': 1, 'showinfo': 0, 'rel': 0 },
           events: { 'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange}
