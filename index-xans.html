@@ -10,11 +10,11 @@
     <meta name="twitter:creator" content="@letterracer">
     <meta name="twitter:title" content="THROW THE XANS IN THE CAN">
     <meta name="twitter:image:src" content="http://letterracer.com/img/splash-xans/preview.png">
-    <meta name="twitter:description" content="SUPPORT THE CAUSE">
+    <meta name="twitter:description" content="Support the cause.">
     <!-- facebook metadata -->
     <meta property="og:title" content="THROW THE XANS IN THE CAN"/>
     <meta property="og:image" content="http://letterracer.com/img/splash-xans/preview.png" />
-    <meta name="description" content="SUPPORT THE CAUSE">
+    <meta name="description" content="Support the cause.">
 
     <title>Letter Racer &ndash; NYC</title>
     <link rel="stylesheet" href="http://letterracer.com/css/letterracer.css">
@@ -29,10 +29,15 @@
           height: 100%;
         }
         .splash, .title, .tv, .support {
-          width: 700px;
+          width: 636px;
           margin: 0 auto;}
         .splash {
             padding-top: 5%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 9;
         }
         .title {
           padding-bottom: 0.5%;
@@ -51,12 +56,13 @@
             position: absolute;
             background-color: rgba(0,0,0,0.5);
             width: 100%;
-            height:100%;}
+            height:100%;
+            z-index: 1;}
     </style>
 </head>
 <body>
+    <div class="dim"></div>
     <div class="container">
-      <div class="dim"></div>
       <div class="splash">
         <div class="title"><img src="/img/splash-xans/title.png"/></div>
         <div class="tv"><div id="player" class="tv__video"></div></div>
