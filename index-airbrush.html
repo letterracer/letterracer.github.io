@@ -18,20 +18,23 @@
     <link rel="stylesheet" href="/css/letterracer.css">
     <style>
       #wrapper {
-        margin-top: 7%;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 640px;
+        height: 550px;
       }
       body {background-color: #fff;text-align: center}
-      a{text-decoration: none;color:#b33630;}
-      a:hover{text-decoration: underline;color:#b33630;}
+      a:link{text-decoration: none; color:#b33630;}
+      a:hover{text-decoration: underline;}
+      a:visited{color:#b33630;}
+      a:active{text-decoration: none;}
       .links{
-        margin: 10px;
-        font-size: 1.25rem;
-      }
-      @media all and (orientation:portrait) {
-        img {
-          width: 100%;
-          height: auto;
-        }
+        margin: 20px;
+        font-size: 1.3rem;
       }
     </style>
 </head>
@@ -42,7 +45,13 @@
         <source src="https://s3.amazonaws.com/letter-racer/airbrushpromo.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
-      <div class="links"><a href="http://shop.letterracer.com/products/custom-airbrush-tee-by-muckman">BUY A CUSTOM SHIRT</a> / <a href="http://blog.letterracer.com/">CONTINUE TO SITE</a></div>
+      <div class="links">
+        <p>
+          <span><a href="http://shop.letterracer.com/products/custom-airbrush-tee-by-muckman">BUY A CUSTOM SHIRT</a></span>
+          /
+          <span><a href="http://blog.letterracer.com/">CONTINUE TO SITE</a></span>
+        </p>
+      </div>
     </div>
 </body>
 </html>
