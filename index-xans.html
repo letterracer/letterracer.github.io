@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
+    <!-- twitter metadata -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@letterracer">
+    <meta name="twitter:domain" content="letterracer.com">
+    <meta name="twitter:creator" content="@letterracer">
+    <meta name="twitter:title" content="THROW THE XANS IN THE CAN">
+    <meta name="twitter:image:src" content="http://letterracer.com/img/splash-xans/preview.png">
+    <meta name="twitter:description" content="A message to the youts from Letter Racer">
+    <!-- facebook metadata -->
+    <meta property="og:title" content="THROW THE XANS IN THE CAN"/>
+    <meta property="og:image" content="http://letterracer.com/img/splash-xans/preview.png" />
+    <meta name="description" content="A message to the youts from Letter Racer">
+
+    <title>Letter Racer &ndash; NYC</title>
+    <link rel="stylesheet" href="http://letterracer.com/css/letterracer.css">
+    <style>
+        body {
+          background-image: url('/img/splash-xans/background.gif');
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-size: cover;
+          -moz-background-size: cover;
+          text-align: center;
+          height: 100%;
+          width: 100%;}
+        .container {
+          width: 100%;
+          height: 100%;
+        }
+        .splash, .title, .tv, .support {
+          width: 636px;
+          margin: 0 auto;}
+        .splash {
+            padding-top: 5%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 9;
+        }
+        .title {
+          padding-bottom: 0.5%;
+        }
+        .support {
+          padding-top: 1.5%;
+        }
+        .tv__video {
+            z-index:9;
+            width:636px;
+            height:358px;
+            -webkit-box-shadow: 0px 3px 48px 6px rgba(0,0,0,0.63);
+            -moz-box-shadow: 0px 3px 48px 6px rgba(0,0,0,0.63);
+            box-shadow: 0px 3px 48px 6px rgba(0,0,0,0.63);}
+        .dim {
+            position: absolute;
+            background-color: rgba(0,0,0,0.5);
+            width: 100%;
+            height:100%;
+            z-index: 1;}
+    </style>
+</head>
+<body>
+    <div class="dim"></div>
+    <div class="container">
+      <div class="splash">
+        <div class="title"><img src="/img/splash-xans/title.png"/></div>
+        <div class="tv"><div id="player" class="tv__video"></div></div>
+        <div class="support"><a href="http://shop.letterracer.com/products/throw-the-xans-in-the-can-tee"><img src="/img/splash-xans/support.jpg"/></a></div>
+      </div>
+    </div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    $('.dim').hide();
+
+    var player;
+    var tvIsWaiting, playing = false;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '358',
+          width: '636',
+          videoId: 'xAaknhj8Z3w',
+          playerVars: { 'controls': 1, 'showinfo': 0, 'rel': 0 },
+          events: { 'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange}
+        });
+    }
+
+    function onPlayerReady(event) {
+        if (tvIsWaiting) {
+            player.playVideo();
+        }
+    }
+
+    function tvOn() {
+        tvIsWaiting = true;
+    }
+
+    function onPlayerStateChange(event) {
+        if(!playing){
+            $('.dim').show();
+            playing = true;
+        }
+    }
+</script>
+</body>
+</html>

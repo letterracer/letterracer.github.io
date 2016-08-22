@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -8,106 +7,51 @@
     <meta name="twitter:site" content="@letterracer">
     <meta name="twitter:domain" content="letterracer.com">
     <meta name="twitter:creator" content="@letterracer">
-    <meta name="twitter:title" content="THROW THE XANS IN THE CAN">
-    <meta name="twitter:image:src" content="http://letterracer.com/img/splash-xans/preview.png">
-    <meta name="twitter:description" content="A message to the youts from Letter Racer">
+    <meta name="twitter:title" content="Custom Airbrush T-Shirts by Arvid Logan">
+    <meta name="twitter:image:src" content="http://letterracer.com/img/splash-eurotour/flyer.jpg">
+    <meta name="twitter:description" content="Now available on letterracer.com">
     <!-- facebook metadata -->
-    <meta property="og:title" content="THROW THE XANS IN THE CAN"/>
-    <meta property="og:image" content="http://letterracer.com/img/splash-xans/preview.png" />
-    <meta name="description" content="A message to the youts from Letter Racer">
+    <meta property="og:image" content="http://letterracer.com/img/splash-eurotour/flyer.jpg" />
+    <meta name="description" content="Custom Airbrush T-Shirts by Arvid Logan">
 
     <title>Letter Racer &ndash; NYC</title>
-    <link rel="stylesheet" href="http://letterracer.com/css/letterracer.css">
+    <link rel="stylesheet" href="/css/letterracer.css">
     <style>
-        body {
-          background-image: url('/img/splash-xans/background.gif');
-          background-attachment: fixed;
-          background-repeat: no-repeat;
-          background-size: cover;
-          -moz-background-size: cover;
-          text-align: center;
-          height: 100%;
-          width: 100%;}
-        .container {
-          width: 100%;
-          height: 100%;
-        }
-        .splash, .title, .tv, .support {
-          width: 636px;
-          margin: 0 auto;}
-        .splash {
-            padding-top: 5%;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            z-index: 9;
-        }
-        .title {
-          padding-bottom: 0.5%;
-        }
-        .support {
-          padding-top: 1.5%;
-        }
-        .tv__video {
-            z-index:9;
-            width:636px;
-            height:358px;
-            -webkit-box-shadow: 0px 3px 48px 6px rgba(0,0,0,0.63);
-            -moz-box-shadow: 0px 3px 48px 6px rgba(0,0,0,0.63);
-            box-shadow: 0px 3px 48px 6px rgba(0,0,0,0.63);}
-        .dim {
-            position: absolute;
-            background-color: rgba(0,0,0,0.5);
-            width: 100%;
-            height:100%;
-            z-index: 1;}
+      #wrapper {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 640px;
+        height: 550px;
+      }
+      body {background-color: #fff;text-align: center}
+      a:link{text-decoration: none; color:#b33630;}
+      a:hover{text-decoration: underline;}
+      a:visited{color:#b33630;}
+      a:active{text-decoration: none;}
+      .links{
+        margin: 20px;
+        font-size: 1.3rem;
+      }
     </style>
 </head>
+
 <body>
-    <div class="dim"></div>
-    <div class="container">
-      <div class="splash">
-        <div class="title"><img src="/img/splash-xans/title.png"/></div>
-        <div class="tv"><div id="player" class="tv__video"></div></div>
-        <div class="support"><a href="http://shop.letterracer.com/products/throw-the-xans-in-the-can-tee"><img src="/img/splash-xans/support.jpg"/></a></div>
+    <div id="wrapper">
+      <video width="640" height="480" controls autoplay loop>
+        <source src="https://s3.amazonaws.com/letter-racer/airbrushpromo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+      <div class="links">
+        <p>
+          <span><a href="http://shop.letterracer.com/products/custom-airbrush-tee-by-muckman">BUY A CUSTOM SHIRT</a></span>
+          /
+          <span><a href="http://blog.letterracer.com/">CONTINUE TO SITE</a></span>
+        </p>
       </div>
     </div>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="https://www.youtube.com/iframe_api"></script>
-<script>
-    $('.dim').hide();
-
-    var player;
-    var tvIsWaiting, playing = false;
-
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '358',
-          width: '636',
-          videoId: 'xAaknhj8Z3w',
-          playerVars: { 'controls': 1, 'showinfo': 0, 'rel': 0 },
-          events: { 'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange}
-        });
-    }
-
-    function onPlayerReady(event) {
-        if (tvIsWaiting) {
-            player.playVideo();
-        }
-    }
-
-    function tvOn() {
-        tvIsWaiting = true;
-    }
-
-    function onPlayerStateChange(event) {
-        if(!playing){
-            $('.dim').show();
-            playing = true;
-        }
-    }
-</script>
 </body>
 </html>
