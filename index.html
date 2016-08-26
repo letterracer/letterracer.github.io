@@ -1,149 +1,172 @@
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- twitter metadata -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@sportinglifeny">
-    <meta name="twitter:domain" content="sportinglife.nyc">
-    <meta name="twitter:creator" content="@sportinglifeny">
-    <meta name="twitter:title" content="Sporting Life">
-    <meta name="twitter:image:src" content="http://sportinglife.nyc/img/teaser-poster.jpg">
-    <meta name="twitter:description" content="Slam Dunk Vol. I coming soon">
-    <!-- facebook metadata -->
-    <meta property="og:image" content="http://sportinglife.nyc/img/teaser-poster.jpg" />
-    <meta name="description" content="Slam Dunk Vol. I coming soon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- twitter metadata -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@sportinglifeny">
+  <meta name="twitter:domain" content="sportinglife.nyc">
+  <meta name="twitter:creator" content="@sportinglifeny">
+  <meta name="twitter:title" content="Sporting Life">
+  <meta name="twitter:image:src" content="http://sportinglife.nyc/img/slam-dunk.jpg">
+  <meta name="twitter:description" content="Slam Dunk Vol. I OUT NOW">
+  <!-- facebook metadata -->
+  <meta property="og:image" content="http://sportinglife.nyc/img/slam-dunk.jpg" />
+  <meta name="description" content="Slam Dunk Vol. I OUT NOW">
 
-    <title>Sporting Life</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"></link>
-    <style>
-      @font-face {
-        font-family: LetterRacer10;
-        src: url("../font/LetterRacer10.ttf");
-      }
-      body {
-        text-align: center;
-        font-size: 32px;
-        color: #fff;
-        font-family: LetterRacer10;
-      }
-      video#bgvid {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1;
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-        background: url() no-repeat;
-        background-size: cover;
-      }
-      .flex-center {
-        height: 100%;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-justify-content: flex-end;
-        justify-content: flex-end;
-      }
-      ul,li {
-        list-style-type: none;
-        list-style-position:inside;
-        margin:0;
-        padding:0;
-        display: table-cell;
-      }
-      .email {
-        font-family: LetterRacer10;
-        font-size: 32px;
-        width: auto;
-        color: #fff;
-        background: none;
-        outline: none;
-        padding: 6px;
-        border-width: 1px;
-        border-color: #fff;
-        /*border-left-width: 0px;
-        border-right-width: 0px;
-        border-top-width: 0px;*/
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-      .submit {
-        font-family: LetterRacer10;
-        font-size: 32px;
-        color: #fff;
-        background: none;
-        outline: none;
-        padding: 6px;
-        border-width: 1px;
-        cursor: pointer;
-      }
-      @media (max-width: 400px) {
-        .email, .submit {
-          font-size: 20px;
-        }
-      }
-      .mobile {
-        display: none;
-        font-size: 50px;
-        align-self: center;
-      }
-      .play, .pause {
-        font-size: 14px;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-      }
-      .play {
-        display: none;
-      }
-    </style>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="js/mobile.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        var vid = document.getElementById('bgvid');
-        $('.pause').click(
-          function() {
-            vid.pause();
-            $('.pause').toggle();
-            $('.play').toggle();
-          });
-        $('.play').click(
-          function() {
-            vid.play();
-            $('.pause').toggle();
-            $('.play').toggle();
-          });
-        md = new MobileDetect(window.navigator.userAgent);
-        if (md.mobile() !== null) {
-            var vid = document.getElementById('bgvid');
-            $('#bgvid').attr("src","http://d2ra2za53afm6b.cloudfront.net/SPORT_HYDRATE_TEASER_md.mp4");
-            $('.pause').hide();
-            $('.mobile').show();
-            $('.mobile').click(
-              function() {
-                vid.play();
-                $('.mobile').hide();
-              });
-        }});
-    </script>
+  <title>Sporting Life</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
+  <style>
+  @font-face {
+    font-family: LetterRacer10;
+    src: url("../font/LetterRacer10.ttf");
+  }
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: LetterRacer10;
+    font-size: 1.25em;
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  a {
+    color: #fff;
+  }
+  span {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+  #bgvid {
+    width: 100%;
+    height: auto;
+  }
+  .cover {
+    margin: auto;
+    width: 70%;
+  }
+  .cover img {
+    width: 100%;
+    height: auto;
+  }
+  .ep-sm {
+    margin: 0.5em;
+    font-size: 1.5em;
+  }
+  .merch-sm {
+    margin: 1.5em 0;
+  }
+  .play, .pause, .ep, .merch {
+    display: none;
+  }
+  footer {
+    margin: 0 auto;
+    width: 100px;
+    padding: 10px;
+  }
+  @media only screen and (min-width: 800px) {
+    body {
+    	font-size: 2.5em;
+    }
+    span {
+    	font-size: 0.5em;
+      line-height: 1em;
+    }
+    h2 {
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .flex-row {
+      display: -webkit-flex; /* Safari */
+      display: flex;
+      -webkit-flex-flow: row nowrap; /* Safari */
+      flex-flow:         row nowrap;
+      align-items: center;
+    }
+    .flex-center {
+      display: -webkit-flex; /* Safari */
+      display: flex;
+      -webkit-flex-flow: row nowrap; /* Safari */
+      flex-flow:         row nowrap;
+      align-items: center;
+      justify-content: center;
+      -webkit-justify-content: center;
+    }
+    #bgvid {
+      width: 80%;
+      height: auto;
+    }
+    .cover {
+      height: 400px;
+      width: auto;
+      margin: 0 0.5em;
+      margin-bottom: 1.5em;
+    }
+    .cover img {
+      height: 100%;
+      width: auto;
+    }
+    .merch, .ep {
+      border: -1px solid #fff;
+      height: 400px;
+      width: calc((100% - 400px) / 2);
+      text-align: center;
+    }
+    .play, .pause {
+      display: block;
+      font-size: 14px;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+    }
+    .play, .ep-sm, .merch-sm {
+      display: none;
+    }
+    footer {
+      margin: 0 auto;
+      width: 100px;
+      padding: 30px;
+    }
+    .shop {
+      font-size: 0.75em;
+      text-align: center;
+    }
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="js/mobile.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      var vid = document.getElementById('bgvid');
+      $('.pause').click(
+        function() {
+          vid.pause();
+          $('.pause').toggle();
+          $('.play').toggle();
+        });
+      $('.play').click(
+        function() {
+          vid.play();
+          $('.pause').toggle();
+          $('.play').toggle();
+        });
+      md = new MobileDetect(window.navigator.userAgent);
+      if (md.mobile() !== null) {
+          var vid = document.getElementById('bgvid');
+          $('#bgvid').attr("src","http://d2ra2za53afm6b.cloudfront.net/SPORT_HYDRATE_TEASER_md.mp4");
+          $('#bgvid').attr("controls","controls");
+      }});
+  </script>
 </head>
 
 <body>
-  <video playsinline webkit-playsinline autoplay loop poster="img/teaser-poster.jpg" id="bgvid">
+  <video id="bgvid" playsinline webkit-playsinline autoplay loop poster="img/splash-slamdunk/teaser-poster.jpg">
       <source src="http://d2ra2za53afm6b.cloudfront.net/SPORT_HYDRATE_TEASER25.7.mp4">
   </video>
   <div class="play">
@@ -152,31 +175,40 @@
   <div class="pause">
     <i class="fa fa-pause fa-inverse fa-sm" aria-hidden="true"></i>
   </div>
-  <div class="flex-center">
-    <div class="mobile">
-      <i class="fa fa-play-circle fa-inverse fa-lg" aria-hidden="true"></i>
+  <!-- <div class="videoWrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FuoPgIsmlnE?autoplay=1" frameborder="0" allowfullscreen></iframe>
+  </div> -->
+  <h2>Slam Dunk Vol. I Out Now</h2>
+  <div class="flex-row flex-row-sm">
+    <div class="ep flex-center">
+      <div>
+        <a href="http://now.bt.co/bundles/sporting-life-slam-dunk-1s">STREAM</a><br>
+        +<br>
+        <a href="https://now.bt.co/bundles/sporting-life-slam-dunk-1">DOWNLOAD</a>
+      </div>
     </div>
-    <div><h2>Slam Dunk Vol. I coming soon</h2></div>
-    <div class="mail-list  js-mail-list-signup">
-      <form id="mail-list-signup" class="form  form--mail-list-signup" method="POST" action="https://my.sendinblue.com/users/subscribeembed/js_id/2a2sw/id/1">
-        <input type="hidden" name="js_id" id="js_id" value="2a2sw"><input type="hidden" name="listid" id="listid" value="4">
-        <input type="hidden" name="from_url" id="from_url" value="yes">
-        <input type="hidden" name="hdn_email_txt" id="hdn_email_txt" value="">
-        <input type="hidden" name="req_hid" id="req_hid" value="">
-        <center>
-          <ul class="signup-widget">
-            <li>
-              <input class="email" type="email" value="" placeholder="you@email.com" name="email" autocomplete="off">
-            </li>
-            <li>
-              <button type="submit" class="submit">Sign Up</button>
-            </li>
-          </ul>
-        </center>
-        <div class="result"></div>
-      </form>
+    <div class="cover">
+      <img src="img/splash-slamdunk/slam-dunk.jpg"/>
+    </div>
+    <div class="ep-sm">
+      <a href="http://now.bt.co/bundles/sporting-life-slam-dunk-1s">STREAM</a> +
+      <a href="https://now.bt.co/bundles/sporting-life-slam-dunk-1">DOWNLOAD</a>
+    </div>
+    <div class="merch flex-center">
+      <a href="http://shop.letterracer.com/products/sportinglife-slam-dunk-vol-1-sweatband">
+        Sporting Life<br>
+        Sweatbands<br><br>
+        <span>Exclusively at letterracer.com</span></a>
+    </div>
+    <div class="merch-sm">
+      <a href="http://shop.letterracer.com/products/sportinglife-slam-dunk-vol-1-sweatband">
+        Buy Sporting Life Sweatbands</a><br>
+        <span>Exclusively at letterracer.com</span>
     </div>
   </div>
-  <script src="js/mail-list.js"></script>
+  <footer>
+    <img width="100%" src="img/splash-slamdunk/logo.jpg"/>
+  </footer>
+  <p class="shop"><a href="http://shop.letterracer.com">Continue to Site</a></p>
 </body>
 </html>
