@@ -15,7 +15,7 @@
   <meta name="description" content="SLAM DUNK VOL. I OUT NOW">
 
   <title>Sporting Life</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/> -->
   <style>
   @font-face {
     font-family: LetterRacer10;
@@ -64,6 +64,21 @@
     margin: 0 auto;
     width: 100px;
     padding: 10px;
+  }
+  @media only screen and (max-width: 800px) {
+    .videoWrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 25px;
+      height: 0;
+    }
+    .videoWrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
   @media only screen and (min-width: 800px) {
     body {
@@ -139,7 +154,7 @@
     }
   }
   </style>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="js/mobile.min.js"></script>
   <script>
   $(document).ready(function(){
@@ -162,11 +177,11 @@
           $('#bgvid').attr("src","http://d2ra2za53afm6b.cloudfront.net/SPORT_HYDRATE_TEASER_md.mp4");
           $('#bgvid').attr("controls","controls");
       }});
-  </script>
+  </script> -->
 </head>
 
 <body>
-  <video id="bgvid" playsinline webkit-playsinline autoplay loop poster="img/splash-slamdunk/teaser-poster.jpg">
+  <!-- <video id="bgvid" playsinline webkit-playsinline autoplay loop poster="img/teaser-poster.jpg">
       <source src="http://d2ra2za53afm6b.cloudfront.net/SPORT_HYDRATE_TEASER25.7.mp4">
   </video>
   <div class="play">
@@ -174,10 +189,10 @@
   </div>
   <div class="pause">
     <i class="fa fa-pause fa-inverse fa-sm" aria-hidden="true"></i>
-  </div>
-  <!-- <div class="videoWrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FuoPgIsmlnE?autoplay=1" frameborder="0" allowfullscreen></iframe>
   </div> -->
+  <div class="videoWrapper">
+    <iframe width="912" height="513" src="https://www.youtube.com/embed/FuoPgIsmlnE?autoplay=1" frameborder="0" allowfullscreen></iframe>
+  </div>
   <h2>Slam Dunk Vol. I Out Now</h2>
   <div class="flex-row flex-row-sm">
     <div class="ep flex-center">
@@ -187,7 +202,7 @@
       </div>
     </div>
     <div class="cover">
-      <img src="img/splash-slamdunk/slam-dunk-800.jpg"/>
+      <img src="img/slam-dunk-800.jpg"/>
     </div>
     <div class="ep-sm">
       <a href="https://now.bt.co/bundles/sporting-life-slam-dunk-1">DOWNLOAD</a>
@@ -205,7 +220,7 @@
     </div>
   </div>
   <footer>
-    <img width="100%" src="img/splash-slamdunk/logo.jpg"/>
+    <img width="100%" src="img/logo.jpg"/>
   </footer>
   <p class="shop"><a href="http://shop.letterracer.com">Continue to Site</a></p>
 </body>
