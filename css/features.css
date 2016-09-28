@@ -1,5 +1,6 @@
 .horizontal-border {
   position: relative;
+  z-index: 1;
   background-color: white;
   display: inline-block;
   border-top: 1px solid transparent;
@@ -8,6 +9,27 @@
   -o-border-image: url(../img/features/horizontal.png) 6 repeat; /* Opera 11-12.1 */
   border-image: url(../img/features/horizontal.png) 6 repeat;
 }
+
+@media screen and (max-width: 623px) {
+  .flexcontainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-align-content: center;
+    align-content: center;
+  }
+  .horizontal-border {
+    top: 0 !important;
+    left: 0 !important;
+    margin-bottom: 25px;
+  }
+}
+
 .vertical-border {
   display: inline-block;
   border-left: 1px solid transparent;

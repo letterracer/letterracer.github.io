@@ -3,12 +3,15 @@ $(document).ready(function(e) {
         $(this).css('z-index', 2);
         $(this).siblings('div').css('z-index', 1);
     });
+
     $('.horizontal-border').draggable({
       handle: '.bar'
     });
+
     $('.x').click(function(){
       $(this).parent().parent().parent().hide()
     });
+
     $('img[usemap]').rwdImageMaps();
 
     $('.js-anim').on('mouseenter', function(e){
