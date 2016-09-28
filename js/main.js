@@ -1,4 +1,14 @@
 $(document).ready(function(e) {
+    $('.horizontal-border').click(function(){
+        $(this).css('z-index', 2);
+        $(this).siblings('div').css('z-index', 1);
+    });
+    $('.horizontal-border').draggable({
+      handle: '.bar'
+    });
+    $('.x').click(function(){
+      $(this).parent().parent().parent().hide()
+    });
     $('img[usemap]').rwdImageMaps();
 
     $('.js-anim').on('mouseenter', function(e){
@@ -26,7 +36,7 @@ $(document).ready(function(e) {
         if (!$(this).hasClass('current') && !$(this).parent().hasClass('current')){
             stopAnimation($('.city-nav__' + this.dataset.link + ' .city-nav__img')[0]);
         }
-    });    
+    });
 
 
     $('.menu-bar').on('mouseenter', function(){
@@ -147,4 +157,3 @@ function stopAnimation(target)
         }
     }
 }
-

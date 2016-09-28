@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         "bower_components/isotope/dist/isotope.pkgd.min.js",
         "bower_components/imagesloaded/imagesloaded.pkgd.min.js",
         "bower_components/moment/min/moment.min.js",
-        "bower_components/moment-timezone/builds/moment-timezone-with-data.min.js"
+        "bower_components/moment-timezone/builds/moment-timezone-with-data.min.js",
     ];
 
     shop_vendor_scripts = vendor_scripts.concat(["node_modules/jquery-zoom/jquery.zoom.min.js"]);

@@ -1,0 +1,33 @@
+.horizontal-border {
+  position: relative;
+  background-color: white;
+  display: inline-block;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  -webkit-border-image: url(../img/features/horizontal.png) 6 repeat; /* Safari 3.1-5 */
+  -o-border-image: url(../img/features/horizontal.png) 6 repeat; /* Opera 11-12.1 */
+  border-image: url(../img/features/horizontal.png) 6 repeat;
+}
+.vertical-border {
+  display: inline-block;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  padding: 1px;
+  -webkit-border-image: url(../img/features/vertical.png) 1 repeat; /* Safari 3.1-5 */
+  -o-border-image: url(../img/features/vertical.png) 1 repeat; /* Opera 11-12.1 */
+  border-image: url(../img/features/vertical.png) 1 repeat;
+}
+.bar {
+  text-align: right;
+  line-height: 0.8em;
+  padding-right: 5px;
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid transparent;
+  -webkit-border-image: url(../img/features/horizontal.png) 6 repeat; /* Safari 3.1-5 */
+  -o-border-image: url(../img/features/horizontal.png) 6 repeat; /* Opera 11-12.1 */
+  border-image: url(../img/features/horizontal.png) 6 repeat;
+}
+.x {
+  cursor: default;
+}
