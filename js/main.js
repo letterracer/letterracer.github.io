@@ -1,7 +1,7 @@
 $(document).ready(function(e) {
-    $('.horizontal-border').click(function(){
-        $(this).css('z-index', 2);
-        $(this).siblings('div').css('z-index', 1);
+    $('.bar').mousedown(function(){
+        $(this).parent().parent().css('z-index', 2);
+        $(this).parent().parent().siblings('div').css('z-index', 1);
     });
 
     $('.horizontal-border').draggable({
@@ -9,7 +9,7 @@ $(document).ready(function(e) {
     });
 
     $('.x').click(function(){
-      $(this).parent().parent().parent().hide()
+      $(this).parent().parent().parent().css('opacity', 0);
     });
 
     $('img[usemap]').rwdImageMaps();

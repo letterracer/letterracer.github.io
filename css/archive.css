@@ -39,6 +39,12 @@
   -o-border-image: url(../img/archive/vertical.png) 1 repeat; /* Opera 11-12.1 */
   border-image: url(../img/archive/vertical.png) 1 repeat;
 }
+img.feature {
+  opacity: 0.9;
+}
+img.feature:hover {
+  opacity: 1;
+}
 .bar {
   text-align: right;
   line-height: 0.8em;
