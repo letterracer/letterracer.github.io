@@ -1,17 +1,4 @@
 $(document).ready(function(e) {
-    $('.bar').mousedown(function(){
-        $(this).parent().parent().css('z-index', 2);
-        $(this).parent().parent().siblings('div').css('z-index', 1);
-    });
-
-    $('.horizontal-border').draggable({
-      handle: '.bar'
-    });
-
-    $('.x').click(function(){
-      $(this).parent().parent().parent().css('opacity', 0);
-    });
-
     $('img[usemap]').rwdImageMaps();
 
     $('.js-anim').on('mouseenter', function(e){

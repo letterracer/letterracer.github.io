@@ -59,3 +59,19 @@ title: Archive
     </div>
   </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+$('.bar').mousedown(function(){
+    $(this).parent().parent().css('z-index', 2);
+    $(this).parent().parent().siblings('div').css('z-index', 1);
+});
+
+$('.horizontal-border').draggable({
+  handle: '.bar'
+});
+
+$('.x').click(function(){
+  $(this).parent().parent().parent().css('opacity', 0);
+});
+</script>
