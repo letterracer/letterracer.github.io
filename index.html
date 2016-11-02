@@ -87,9 +87,6 @@
     margin-top: 1em;
     padding-top: 1em;
   }
-  .mv {
-    margin-bottom: 2em;
-  }
   @media (orientation: portrait) {
     .mv, .stream {
       width: 90%;
@@ -124,16 +121,19 @@
   .site a {
     text-decoration: none;
   }
-  a.tape {
+  .tape {
+    padding-top: 2em;
+  }
+  a.tape-button {
     border: 2px solid white;
     margin: 2em;
     padding: 0.5em;
   }
-  a:hover.tape {
+  a:hover.tape-button {
     border: 2px solid #e05995;
   }
   @media (orientation: portrait) {
-    a.tape {
+    a.tape-button {
       font-size: 0.7em;
       margin: 1em;
     }
@@ -180,12 +180,14 @@
       <br><i onclick="turnPage()" class="fa fa-angle-down" aria-hidden="true"></i>
     </div>
   </div>
+  <div class="tape">
+    <a class="tape-button" href="http://shop.letterracer.com/products/till-death-do-us-part-i-dj-lucas-cassette-tape-pre-order">BUY THE TAPE</a>
+  </div>
   <div class="mv">
     <div class="videoWrapper">
       <iframe src="https://www.youtube.com/embed/_-X-bkGBbkY" controls="0" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
-  <div><a class="tape" href="http://shop.letterracer.com/products/till-death-do-us-part-i-dj-lucas-cassette-tape-pre-order">BUY THE TAPE</a></div>
   <div class="stream">
     <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/271745140%3Fsecret_token%3Ds-T32xX&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
   </div>
@@ -200,7 +202,7 @@
   <script>
     function turnPage() {
       $('html,body').animate({
-          scrollTop: $(".mv").offset().top},
+          scrollTop: $(".tape").offset().top},
           'slow');
     };
   </script>
