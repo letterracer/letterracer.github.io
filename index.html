@@ -2,210 +2,95 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- twitter metadata -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@letterracerny">
-  <meta name="twitter:domain" content="letterracer.com">
-  <meta name="twitter:creator" content="@youngmrclean">
-  <meta name="twitter:title" content="DJ LUCAS">
-  <meta name="twitter:image:src" content="http://letterracer.com/img/splash-tildeath1/cover.jpg">
-  <meta name="twitter:description" content="TILL DEATH DO US PART I Out Now">
-  <!-- facebook metadata -->
-  <meta property="og:image" content="http://letterracer.com/img/splash-tildeath1/cover.jpg" />
-  <meta name="description" content="TILL DEATH DO US PART I Out Now">
 
-  <title>DJ LUCAS</title>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@sportinglifeny">
+  <meta name="twitter:domain" content="sportinglife.nyc">
+  <meta name="twitter:creator" content="@sportinglifeny">
+  <meta name="twitter:title" content="Sporting Life">
+  <meta name="twitter:image:src" content="http://sportinglife.nyc/img/slam-dunk3-800.jpg">
+  <meta name="twitter:description" content="Slam Dunk Vol. III + New Merch Out Now">
+
+  <meta property="og:image" content="http://sportinglife.nyc/img/slam-dunk3-800.jpg" />
+  <meta name="description" content="Slam Dunk Vol. III + New Merch Out Now">
+
+  <title>Sporting Life</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
-  <style>
-  @font-face {
-    font-family: LetterRacer10;
-    src: url("../font/LetterRacer10.ttf");
-  }
-  body {
-    background-color: #000;
-    color: #fff;
-    font-family: LetterRacer10;
-    font-size: 3em;
-    text-align: center;
-  }
-  h2 {
-    text-align: center;
-  }
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #e05995;
-  }
-  footer {
-    margin: 0 auto;
-  }
-  .flex-center {
-    width: 60%;
-    display: -webkit-flex; /* Safari */
-    display: flex;
-    -webkit-flex-flow: row nowrap; /* Safari */
-    flex-flow:         row nowrap;
-    align-items: center;
-    justify-content: center;
-    -webkit-justify-content: center;
-    margin-top: 2.5em;
-    margin-bottom: 1.5em;
-  }
-  @media (orientation: portrait) {
-    .flex-center {
-      width: 100%;
-    }
-  }
-  .flex-item {
-    text-align: center;
-    width: 33%;
-  }
-  .flex-item img {
-    width: 30%;
-  }
-  .clouds {
-    height: 100%;
-    width: 100%;
-    background: url('../img/splash-tildeath1/tildeath.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  @media (orientation: portrait) {
-    .clouds {
-      height: 50%;
-    }
-  }
-  .clouds-inner {
-    padding-top: 0.5em;
-    width: 100%;
-  }
-  .mv, .stream {
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 1em;
-    padding-top: 1em;
-  }
-  @media (orientation: portrait) {
-    .mv, .stream {
-      width: 90%;
-      margin-top: 0;
-    }
-  }
-  .stream {
-    margin-bottom: 2.5em;
-  }
-  @media (orientation: portrait) {
-    .stream {
-      margin-bottom: 1.75em;
-    }
-  }
-  .videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
-  }
-  .videoWrapper iframe, .videoWrapper object, .videoWrapper embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .site {
-    font-size: 0.5em;
-    margin: 1.5em;
-  }
-  .site a {
-    text-decoration: none;
-  }
-  .tape {
-    padding-top: 2em;
-  }
-  a.tape-button {
-    border: 2px solid white;
-    margin: 2em;
-    padding: 0.5em;
-  }
-  a:hover.tape-button {
-    border: 2px solid #e05995;
-  }
-  @media (orientation: portrait) {
-    a.tape-button {
-      font-size: 0.7em;
-      margin: 1em;
-    }
-  }
-  .glow {
-    -webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0));
-    -webkit-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-  }
-  .glow:hover {
-  	-webkit-filter: drop-shadow(0px 6px 10px rgba(255, 255, 50, 1));
-    cursor: pointer;
-  }
-  i {
-    cursor: pointer;
-    margin-top: 0.5em;
-  }
-  @media (orientation: portrait) {
-    i {
-      display: none !important;
-    }
-  }
-  </style>
+  <link rel="stylesheet" href="http://sportinglife.nyc/css/slamdunk3.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/mobile.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      var audio = document.getElementById('slam3');
+      $('.pause').click(
+        function() {
+          audio.pause();
+          $('.pause').toggle();
+          $('.play').toggle();
+        });
+      $('.play').click(
+        function() {
+          audio.play();
+          $('.pause').toggle();
+          $('.play').toggle();
+        });
+      md = new MobileDetect(window.navigator.userAgent);
+      if (md.mobile() !== null) {
+        $('.pause').hide();
+        $('.play').show();
+        $('.mobile').show();
+      };
+    });
+  </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
     ga('create', 'UA-83605195-3', 'auto');
     ga('send', 'pageview');
   </script>
 </head>
 
 <body>
-  <div class="clouds">
-    <div class="clouds-inner">
-      <img width="60%" src="../img/splash-tildeath1/title.png"/><br>
-      <a onclick="ga('send', 'event', 'Downloads', 'click', 'TDDUP1')"
-         href="https://s3.amazonaws.com/letter-racer/TILL+DEATH+DO+US+PART+I.zip">
-        <img class="glow" height="50%" src="../img/splash-tildeath1/carton.png"/>
-      </a>
-      <br><i onclick="turnPage()" class="fa fa-angle-down" aria-hidden="true"></i>
+  <div class="mobile">
+    TAP TO BUY
+  </div>
+  <div class="art">
+    <a href="http://shop.letterracer.com/products/slam-dunk-vol-iii">
+      <img width="100%" src="http://sportinglife.nyc/img/slam-dunk3-800.jpg">
+    </a>
+  </div>
+  <div class="controls">
+    <div class="play">
+      <i class="fa fa-play fa-inverse fa-sm" aria-hidden="true"></i>
+    </div>
+    <div class="pause">
+      <i class="fa fa-pause fa-inverse fa-sm" aria-hidden="true"></i>
     </div>
   </div>
-  <div class="tape">
-    <a class="tape-button" href="http://shop.letterracer.com/products/till-death-do-us-part-i-dj-lucas-cassette-tape-pre-order">BUY THE TAPE</a>
+  <div class="merch-item">
+    <a href="http://shop.letterracer.com/products/sportinglife-slam-dunk-tee">
+      <img class="glow" width="90%" src="http://sportinglife.nyc/img/slamdunk-shirt.gif">
+    </a>
   </div>
-  <div class="mv">
-    <div class="videoWrapper">
-      <iframe src="https://www.youtube.com/embed/_-X-bkGBbkY" controls="0" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-  <div class="stream">
-    <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/271745140%3Fsecret_token%3Ds-T32xX&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+  <div class="merch-item">
+    <a href="http://shop.letterracer.com/products/sportinglife-athletic-shorts">
+      <img class="glow" width="90%" src="http://sportinglife.nyc/img/slamdunk-shorts.gif">
+    </a>
   </div>
   <footer class="flex-center">
-    <div class="flex-item"><img src="../img/splash-tildeath1/logo-inverse.jpg"/></div>
-    <div class="flex-item"><img src="../img/splash-tildeath1/djlucas.png"/></div>
-    <div class="flex-item"><img src="../img/splash-tildeath1/dark-world.jpg"/></div>
+    <div class="flex-item spin-left"><img src="http://sportinglife.nyc/img/sports-logo-inverse.png"/></div>
+    <div class="flex-item lr-logo">
+      <a href="http://letterracer.com">
+        <img src="http://sportinglife.nyc/img/lr-logo-inverse.png"/>
+      </a>
+    </div>
+    <div class="flex-item spin-right"><img src="http://sportinglife.nyc/img/sports-logo2-inverse.png"/></div>
   </footer>
-  <p class="site"><a onclick="ga('send', 'event', 'ClickThrough', 'click', 'ContinueToSite')" 
-                     href="http://shop.letterracer.com">Continue to Site</a></p>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script>
-    function turnPage() {
-      $('html,body').animate({
-          scrollTop: $(".tape").offset().top},
-          'slow');
-    };
-  </script>
+  <audio id="slam3" autoplay>
+    <source src="http://sportinglife.nyc/audio/SLAM003.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+  </audio>
 </body>
 </html>
