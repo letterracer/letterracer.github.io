@@ -17,6 +17,21 @@
   <title>Sporting Life</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/>
   <link rel="stylesheet" href="http://sportinglife.nyc/css/slamdunk3.css"/>
+  <style>
+    footer {
+      margin-bottom: 0;
+    }
+    .site {
+      font-size: 0.75em;
+      margin: 1.5em;
+    }
+    .site a {
+      text-decoration: none;
+    }
+    .site:hover {
+      opacity: 0.75;
+    }
+  </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/mobile.min.js"></script>
   <script>
@@ -82,12 +97,14 @@
   <footer class="flex-center">
     <div class="flex-item spin-left"><img src="http://sportinglife.nyc/img/sports-logo-inverse.png"/></div>
     <div class="flex-item lr-logo">
-      <a href="http://letterracer.com">
+      <a href="http://shop.letterracer.com">
         <img src="http://sportinglife.nyc/img/lr-logo-inverse.png"/>
       </a>
     </div>
     <div class="flex-item spin-right"><img src="http://sportinglife.nyc/img/sports-logo2-inverse.png"/></div>
   </footer>
+  <p class="site"><a onclick="ga('send', 'event', 'ClickThrough', 'click', 'ContinueToSite')"
+                     href="http://shop.letterracer.com">Continue to Site</a></p>
   <audio id="slam3" autoplay>
     <source src="http://sportinglife.nyc/audio/SLAM003.mp3" type="audio/mp3">
   Your browser does not support the audio element.
