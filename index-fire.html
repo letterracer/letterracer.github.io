@@ -1,76 +1,93 @@
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- twitter metadata -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@letterracer">
-    <meta name="twitter:domain" content="letterracer.com">
-    <meta name="twitter:creator" content="@letterracer">
-    <meta name="twitter:title" content="Letter Racer">
-    <meta name="twitter:image:src" content="http://letterracer.com/img/splash-fire/front.jpg">
-    <meta name="twitter:description" content="what happened to fire? A new EP by WIKI and YOUR OLD DROOG">
-    <!-- facebook metadata -->
-    <meta property="og:image" content="http://letterracer.com/img/splash-fire/front.jpg" />
-    <meta name="description" content="what happened to fire? A new EP by WIKI and YOUR OLD DROOG">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- twitter metadata -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@letterracer">
+  <meta name="twitter:domain" content="letterracer.com">
+  <meta name="twitter:creator" content="@letterracer">
+  <meta name="twitter:title" content="Letter Racer">
+  <meta name="twitter:image:src" content="http://letterracer.com/img/splash-fire/front.jpg">
+  <meta name="twitter:description" content="what happened to fire? A new EP by WIKI and YOUR OLD DROOG">
+  <!-- facebook metadata -->
+  <meta property="og:image" content="http://letterracer.com/img/splash-fire/front.jpg" />
+  <meta name="description" content="what happened to fire? A new EP by WIKI and YOUR OLD DROOG">
 
-    <link rel="shortcut icon" href="/img/logo.png">
-    <link rel="apple-touch-icon-precomposed" href="/img/logo.png">
-    <meta name="apple-mobile-web-app-title" content="Letter Racer">
+  <link rel="shortcut icon" href="/img/logo.png">
+  <link rel="apple-touch-icon-precomposed" href="/img/logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
+  <meta name="apple-mobile-web-app-title" content="Letter Racer">
 
-    <title>what happened to fire?</title>
-    <style>
+  <title>what happened to fire?</title>
+  <style>
+    .wrapper {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 1.25em;
+      text-align: center;
+      font-size: 1em;
+    }
+    div {
+      margin-top: 1em;
+    }
+    .flex-row {
+      margin: 0 auto;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      width: 75%;
+    }
+    .flex-row div {
+      width: 50%;
+    }
+    img#subtitle {
+      padding-right: 50px;
+    }
+    #download { margin: 2em }
+    a {
+      font-size: 1.25em;
+      font-family: 'Lato', sans-serif;
+      color: black;
+      border: 2px outset white;
+      background: #eee;
+      padding: 0.25em 0.4em 0.2em 0.45em;
+      text-decoration: none;
+    }
+    a:hover {
+        background: #f5f5f5;
+    }
+    a:active {
+        border-style: inset;
+    }
+    @media all and (orientation:portrait) {
       .wrapper {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        font-family: "Courier", monospace;
-        font-size: 1em;
-      }
-      .flex-row {
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-flow: row wrap;
-        flex-flow: row wrap;
-        margin-top: 1em;
+        width: 95%;
       }
       .flex-row div {
-        width: 50%;
+        width: 100%;
       }
-      .flex-row img { margin-bottom: 1em; }
-      img#subtitle {
-        padding-right: 50px;
-      }
-      a{text-decoration: none;}
-      a:hover{text-decoration: underline;}
-      .links{
-        text-align: center;
-        margin-top: 10px;
-        font-size: 1.25rem;
-      }
-      @media all and (orientation:portrait) {
-        .wrapper {
-          width: 95%;
-        }
-        .flex-row div {
-          width: 100%;
-        }
-        img { width: 100% }
-        img#subtitle { width: 65% }
-      }
-    </style>
+      img { width: 100% }
+      img#subtitle { width: 65% }
+    }
+  </style>
 </head>
 
 <body>
   <div class="wrapper">
     <div class="title">
-      <img width="70%" src="img/splash-fire/title.png"/><br>
+      <img width="65%" src="img/splash-fire/title.png"/><br>
       <img id="subtitle" width="30%" src="img/splash-fire/subtitle.png"/>
     </div>
     <div class="flex-row">
       <div><img width="95%" src="img/splash-fire/front.jpg"/></div>
       <div><img width="95%" src="img/splash-fire/back.jpg"/></div>
     </div>
+    <div id="download">
+      <a href="http://shop.letterracer.com/products/what-happened-to-fire">Download EP</a>
+    </div>
+    <iframe width="73.5%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/143570673&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
   </div>
 </body>
 </html>
