@@ -16,7 +16,7 @@
 
   <link rel="shortcut icon" href="/img/logo.png">
   <link rel="apple-touch-icon-precomposed" href="/img/logo.png">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <meta name="apple-mobile-web-app-title" content="Letter Racer">
 
   <title>what happened to fire?</title>
@@ -34,6 +34,10 @@
       color: black;
       text-decoration: none;
       font-style: italic;
+      font-weight: 700;
+    }
+    a:hover {
+      opacity: 0.75;
     }
     div {
       margin-top: 1em;
@@ -52,28 +56,39 @@
     img#subtitle {
       padding-right: 50px;
     }
+    img#logo {
+      width: 100px;
+      margin-bottom: 2px;
+    }
     #download { margin: 2em }
     #download a {
+      font-weight: 400;
       font-size: 1.25em;
+      font-style: normal;
       border: 2px outset white;
       background: #eee;
-      padding: 0.25em 0.4em 0.2em 0.45em;
+      padding: 0.3em 0.45em 0.25em 0.5em;
     }
     #download a:hover {
-        background: #f5f5f5;
+        background: lightgray;
+        opacity: 1;
     }
     #download a:active {
         border-style: inset;
     }
     @media all and (orientation:portrait) {
-      .wrapper {
-        width: 95%;
-      }
-      .flex-row div {
+      .wrapper { width: 100% }
+      .flex-row { width: 93% }
+      /*.flex-row div {
         width: 100%;
-      }
-      img { width: 100% }
-      img#subtitle { width: 65% }
+      }*/
+      img#title { width: 100% }
+      img#subtitle {
+        width: 65%;
+        padding: 0;
+       }
+      #download a { background-color: #eee }
+      iframe { width: 93% }
     }
   </style>
 </head>
@@ -81,7 +96,7 @@
 <body>
   <div class="wrapper">
     <div class="title">
-      <img width="65%" src="img/splash-fire/title.png"/><br>
+      <img id="title" width="65%" src="img/splash-fire/title.png"/><br>
       <img id="subtitle" width="30%" src="img/splash-fire/subtitle.png"/>
     </div>
     <div class="flex-row">
@@ -89,12 +104,12 @@
       <div><img width="95%" src="img/splash-fire/back.jpg"/></div>
     </div>
     <div id="download">
-      <a href="http://shop.letterracer.com/products/what-happened-to-fire">Download EP</a>
+      <a href="http://shop.letterracer.com/products/what-happened-to-fire">Download the Free EP</a>
     </div>
     <iframe width="73.5%" height="420" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/296841182&amp;color=ff9900&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-    <div style="margin:2em 0 1em 0;">
-      <a href="http://shop.letterracer.com/products/what-happened-to-fire">
-        <img width="100px" src="img/lr-logo.png"/><br>
+    <div style="margin:2em 0 1.5em 0;">
+      <a href="http://shop.letterracer.com">
+        <img id="logo" src="img/lr-logo.png"/><br>
         Continue to Shop
       </a>
     </div>
