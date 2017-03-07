@@ -5,25 +5,26 @@ section: shows
 scripts: update-shows-js.html
 ---
 
-<div>
+<!-- <div>
   <center><a href="http://bit.ly/2iHYVM3"><img width="70%" src="http://wikset.nyc/img/flyers/wiki-2017-02-03.jpg"></a></center>
   <div style="text-align:center;font-size:2rem;margin-bottom:50px"><a href="http://bit.ly/2iHYVM3">BUY TICKETS</a></div>
-</div>
+</div> -->
 
-<!-- {% assign nowtime = 'today' | date: "%Y-%m-%d" | date: '%s' %}{% assign upcoming_shows = false %}{% assign past_shows = false %}{% for post in site.posts %}{% assign posttime = post.date | date: "%Y-%m-%d" | date: '%s' %}{% if posttime > nowtime %}{% assign upcoming_shows = true %}{% else %}{% assign past_shows = true %}{% endif %}{% endfor %}
+{% assign nowtime = 'today' | date: "%Y-%m-%d" | date: '%s' %}{% assign upcoming_shows = false %}{% assign past_shows = false %}{% for post in site.posts %}{% assign posttime = post.date | date: "%Y-%m-%d" | date: '%s' %}{% if posttime > nowtime %}{% assign upcoming_shows = true %}{% else %}{% assign past_shows = true %}{% endif %}{% endfor %}
 {% assign posts = site.posts | sort: 'date' %}
 
 {% if upcoming_shows == false %}
 <h1 class="color-negative  text-center">No upcoming shows.</h1>
 {% else %}
-<div class="grid  show-list  js-shows">{% for post in posts %}{% capture posttime %}{{ post.date | date: "%Y-%m-%d" | date: '%s' }}{% endcapture %}{% unless forloop.first %}-->{% endunless %}{% if posttime > nowtime %}{% include gridshow.html %}{% else %}{% assign past_shows = true %}{% endif %}{% unless forloop.last %} -->
+<div class="grid  show-list  js-shows">
+  {% for post in posts %}{% capture posttime %}{{ post.date | date: "%Y-%m-%d" | date: '%s' }}{% endcapture %}{% unless forloop.first %}-->{% endunless %}{% if posttime > nowtime %}{% include gridshow.html %}{% else %}{% assign past_shows = true %}{% endif %}{% unless forloop.last %}
 
-<!--{% endunless %}
+{% endunless %}
 {% endfor %}
 </div>
 {% endif %}
 
-{% if past_shows %}
+<!--{% if past_shows %}
 <div class="text-center">
     <a class="link-complex" href="/shows/past/">
         <i class="icon  icon--tiny" data-icon="&#xF060"></i> <span class="link-complex__target">PAST SHOWS</span>
