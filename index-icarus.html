@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
+    <!-- twitter metadata -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@letterracer">
+    <meta name="twitter:domain" content="letterracer.com">
+    <meta name="twitter:creator" content="@wikset">
+    <meta name="twitter:title" content='WIKI "Icarus"'>
+    <meta name="twitter:image:src" content="http://letterracer.com/img/splash-3stories/3_stories_meta1.png">
+    <meta name="twitter:description" content='Wiki "Icarus" video out now via letterracer.com'>
+    <!-- facebook metadata -->
+    <meta property="og:image" content="http://letterracer.com/img/splash-3stories/3_stories_meta.png" />
+    <meta name="description" content='Wiki "Icarus" video out now via letterracer.com'>
+
+    <title>WIKI "Icarus"</title>
+    <style>
+        body {
+          background-color: white;
+          font-family: "helvetica",sans-serif;
+          font-weight: bold;}
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 1.2em;}
+        a:hover{text-decoration: underline;}
+        .links {
+            position:fixed;
+            bottom: 5px;
+            right:10px;
+            margin: 10px;
+        }
+        .tv {
+          width: 700px;
+          margin: 0 auto;
+          margin-top: 10%;
+        }
+        .tv__video{
+            border: 1px solid black;
+            width:700px;
+            height:394px;
+            -webkit-box-shadow: 0px 3px 20px 4px rgba(0,0,0,0.77);
+            -moz-box-shadow: 0px 3px 20px 4px rgba(0,0,0,0.77);
+            box-shadow: 0px 3px 20px 4px rgba(0,0,0,0.77);}
+    </style>
+</head>
+<body>
+    <div class="tv">
+        <div id="player" class="tv__video"></div>
+        <div style="text-align:center;margin-top:20px">
+          <img width="170px" src="img/splash-icarus/wiki-handstyle.png"/>
+        </div>
+    </div>
+    <div class="links"><a href="http://shop.letterracer.com">CONTINUE TO SHOP</a></div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    var player;
+    var tvIsWaiting, playing = false;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '394',
+          width: '700',
+          videoId: 'avHTKUJF9dQ',
+          playerVars: { 'controls': 1, 'showinfo': 0, 'rel': 0 },
+          events: { 'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange}
+        });
+    }
+    function onPlayerReady(event) {
+        if (tvIsWaiting) {
+            player.playVideo();
+        }
+    }
+    function tvOn() {
+        tvIsWaiting = true;
+    }
+    function onPlayerStateChange(event) {
+        if(!playing){
+            playing = true;
+        }
+    }
+</script>
+</body>
+</html>
