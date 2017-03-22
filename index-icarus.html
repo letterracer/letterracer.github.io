@@ -2,87 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.4">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- twitter metadata -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@letterracer">
     <meta name="twitter:domain" content="letterracer.com">
     <meta name="twitter:creator" content="@wikset">
-    <meta name="twitter:title" content='WIKI "Icarus"'>
-    <meta name="twitter:image:src" content="http://letterracer.com/img/splash-3stories/3_stories_meta1.png">
+    <meta name="twitter:title" content='Wiki - Icarus'>
+    <meta name="twitter:image:src" content="http://letterracer.com/img/splash-icarus/icarus.png">
     <meta name="twitter:description" content='Wiki "Icarus" video out now via letterracer.com'>
     <!-- facebook metadata -->
-    <meta property="og:image" content="http://letterracer.com/img/splash-3stories/3_stories_meta.png" />
+    <meta property="og:image" content="http://letterracer.com/img/splash-icarus/icarus.png" />
     <meta name="description" content='Wiki "Icarus" video out now via letterracer.com'>
 
-    <title>WIKI "Icarus"</title>
+    <title>Wiki - Icarus</title>
     <style>
-        body {
-          background-color: white;
-          font-family: "helvetica",sans-serif;
-          font-weight: bold;}
+      html { height: 100% }
+      body {
+        background-color: white;
+        font-family: "helvetica",sans-serif;
+        font-weight: bold;
+        height: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2em;
+      }
+      a:hover { text-decoration: underline }
+      .links {
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+        margin: 10px;
+      }
+      @media screen and (max-width: 680px) {
+        iframe {
+          width: 300px !important;
+          height: 169px !important;
+        }
+        img {
+          width: 50px !important;
+        }
         a {
-          text-decoration: none;
-          color: black;
-          font-size: 1.2em;}
-        a:hover{text-decoration: underline;}
-        .links {
-            position:fixed;
-            bottom: 5px;
-            right:10px;
-            margin: 10px;
+          font-size: 0.8em;
         }
-        .tv {
-          width: 700px;
-          margin: 0 auto;
-          margin-top: 10%;
-        }
-        .tv__video{
-            border: 1px solid black;
-            width:700px;
-            height:394px;
-            -webkit-box-shadow: 0px 3px 20px 4px rgba(0,0,0,0.77);
-            -moz-box-shadow: 0px 3px 20px 4px rgba(0,0,0,0.77);
-            box-shadow: 0px 3px 20px 4px rgba(0,0,0,0.77);}
+      }
+      .flex {
+        height:100%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+      }
+      iframe{
+        border: 1px solid black;
+        -webkit-box-shadow: 0px 3px 20px 4px rgba(0,0,0,0.77);
+        -moz-box-shadow: 0px 3px 20px 4px rgba(0,0,0,0.77);
+        box-shadow: 0px 3px 20px 4px rgba(0,0,0,0.77);
+      }
     </style>
 </head>
 <body>
-    <div class="tv">
-        <div id="player" class="tv__video"></div>
+    <div class="flex">
+        <iframe width="680" height="382" src="https://www.youtube.com/embed/uyYtsY3_4dA" frameborder="0" allowfullscreen></iframe>
         <div style="text-align:center;margin-top:20px">
-          <a href="http://wikset.nyc"><img width="170px" src="img/splash-icarus/wiki-handstyle.png"/></a>
+          <a href="http://wikset.nyc"><img width="100px" src="img/splash-icarus/wiki-handstyle.png"/></a>
         </div>
     </div>
-    <div class="links"><a href="http://shop.letterracer.com">CONTINUE TO SHOP</a></div>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="https://www.youtube.com/iframe_api"></script>
-<script>
-    var player;
-    var tvIsWaiting, playing = false;
-
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '394',
-          width: '700',
-          videoId: 'avHTKUJF9dQ',
-          playerVars: { 'controls': 1, 'showinfo': 0, 'rel': 0 },
-          events: { 'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange}
-        });
-    }
-    function onPlayerReady(event) {
-        if (tvIsWaiting) {
-            player.playVideo();
-        }
-    }
-    function tvOn() {
-        tvIsWaiting = true;
-    }
-    function onPlayerStateChange(event) {
-        if(!playing){
-            playing = true;
-        }
-    }
-</script>
+    <div class="links"><a href="http://shop.letterracer.com/collections/wiki">CONTINUE TO SHOP</a></div>
 </body>
 </html>
